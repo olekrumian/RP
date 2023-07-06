@@ -394,9 +394,11 @@ sliderCooperate.addEventListener('mouseenter', () =>
 sliderCooperate.addEventListener('mouseleave', autoPlayCooperate)
 /* End Of Slider Cooperate */
 
-carouselChildren.forEach((card) => {
-  card.addEventListener('click', openFullScreen)
-})
+if (window.matchMedia('(min-width: 577px)').matches) {
+  carouselChildren.forEach((card) => {
+    card.addEventListener('click', openFullScreen)
+  })
+}
 
 function openFullScreen() {
   const clickedCard = this

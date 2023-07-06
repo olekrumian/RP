@@ -1017,19 +1017,6 @@ button:hover {
 
 /* End Of Photo Slider */
 
-.full-screen-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
 .full-screen-card {
   max-width: 100%;
   max-height: 100%;
@@ -1190,11 +1177,40 @@ input[type='number'] {
   font-weight: var(--fw-500);
 }
 
+.full-screen-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.full-screen-card {
+  position: relative;
+}
+
+.close-gallery-button {
+  position: absolute;
+  top: 1.6rem;
+  right: -7.4rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  background: url('./src/assets/closeGalerry.svg') center no-repeat;
+  background-color: var(--thirty-grey);
+  border: none;
+}
+
 /* End of Footer */
 @media only screen and (max-width: 576px) {
   .container {
     width: 100%;
-    max-width: 96%;
+    max-width: 94%;
     margin: 0 auto;
   }
 
@@ -1713,7 +1729,7 @@ input[type='number'] {
     margin: 9.6rem auto 0rem;
     padding: 8.8rem 1.5rem;
     width: 100%;
-    max-width: 96%;
+    max-width: 94%;
   }
 
   .form-title {

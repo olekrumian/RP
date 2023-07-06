@@ -404,9 +404,14 @@ function openFullScreen() {
   const fullScreenCard = clickedCard.cloneNode(true)
   fullScreenCard.classList.add('full-screen-card')
 
+  const closeButton = document.createElement('button')
+  closeButton.classList.add('close-gallery-button')
+  closeButton.addEventListener('click', closeFullScreen)
+
   const fullScreenContainer = document.createElement('div')
   fullScreenContainer.classList.add('full-screen-container')
   fullScreenContainer.appendChild(fullScreenCard)
+  fullScreenCard.appendChild(closeButton)
 
   document.body.appendChild(fullScreenContainer)
 

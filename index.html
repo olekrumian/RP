@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./main.css" />
+  <title>Сонячні панелі Romstal</title>
+</head>
+
+<body>
+  <header id="header" class="header flex">
+    <div class="logo">
+      <a href="./index.html">
+        <h2 class="logo-title">Romstal</h2>
+      </a>
+    </div>
+
+    <button class="mobile-nav-toggle" aria-controls="navigation" aria-expanded="false" aria-label="Меню" title="Меню">
+      <span class="sr-only">Меню</span>
+    </button>
+
+    <nav id="navigation" class="navigation flex" data-visible="false">
+      <div class="nav-logo">
+        <a href="./index.html">
+          <h2 class="logo-title">Romstal</h2>
+        </a>
+      </div>
+      <ul class="navigation-list flex">
+        <li class="navigation-item">
+          <a class="nav-link" href="#benefits">Переваги</a>
+        </li>
+        <li class="navigation-item">
+          <a class="nav-link" href="#stationTypes">Типи станцій</a>
+        </li>
+        <li class="navigation-item">
+          <a class="nav-link" href="#installation">Встановлення</a>
+        </li>
+        <li class="navigation-item">
+          <a class="nav-link" href="#completed">Виконані проекти</a>
+        </li>
+        <li class="navigation-item">
+          <a href="https://romstal.ua/uk/catalog/1178-fotovoltazhnye-paneli/" target="_blank">Каталог панелей</a>
+        </li>
+        <li class="navigation-item">
+          <a href="https://romstal.ua/uk/site/about" target="_blank">О нас</a>
+        </li>
+      </ul>
+      <div class="nav-item">
+        <h4 class="nav-item-title">Контакти</h4>
+        <div class="nav-contact">
+          <a href="tel:+380504407779">+38 050 440 77 79</a>
+          <a href="mailto:shop@romstal.ua">shop@romstal.ua</a>
+          <address><a
+              href="https://www.google.com/maps/place/%D0%A0%D0%BE%D0%BC%D1%81%D1%82%D0%B0%D0%BB+%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0/@50.4807992,30.4897451,18.44z/data=!4m15!1m8!3m7!1s0x40d4cde21e653823:0xbd95e9dadc1394d0!2z0LLRg9C70LjRhtGPINCd0L7QstC-0LrQvtGB0YLRj9C90YLQuNC90ZbQstGB0YzQutCwLCA00JAsINCa0LjRl9CyLCAwMjAwMA!3b1!8m2!3d50.479536!4d30.492765!16s%2Fg%2F11c5d4xzrk!3m5!1s0x40d4cde21e653823:0x168a044b98379039!8m2!3d50.4809987!4d30.4898449!16s%2Fg%2F11_t2f4h7?entry=ttu"
+              target="_blank">м. Київ, вул. Новокостянтинівська 4А</a></address>
+        </div>
+      </div>
+      <div class="navigation-btn-wrapper flex">
+        <a class="navigation-phone" href="tel:+380504407779">+38 050 440 77 79</a>
+        <button class="btn leaveRequest">Залишити заявку</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main flex">
+    <h1 class="main-title">Відновлювальна сонячна енергія для економії, заробітку та автономії</h1>
+    <p class="main-description">
+      Отримайте домашню сонячну станцію “під ключ” і більше не сплачуйте за
+      електроенергію. Заробляйте пасивно від 1 200 до 8 000 $ на рік.
+    </p>
+  </main>
+  <div class="container">
+    <section id="benefits" class="benefits flex">
+      <h2 class="benefits-title section-title">Переваги сонячних панелей</h2>
+      <div class="benefits-wrapper flex">
+        <div class="benefits-item">
+          <div class="benefits-img">
+            <img loading="lazy" src="./src/assets/money.svg" alt="Iнвестиція">
+          </div>
+          <div class="benefits-text-wrapper">
+            <strong class="benefits-item-title">Iнвестиція</strong>
+            <p class="benefits-item-description">Зробити вигідну інвестицію і заробляти на зеленому тарифі $25 000 за 5
+              років</p>
+          </div>
+        </div>
+        <div class="benefits-item">
+          <div class="benefits-img">
+            <img loading="lazy" src="./src/assets/grow.svg" alt="Прибуток">
+          </div>
+          <div class="benefits-text-wrapper">
+            <strong class="benefits-item-title">Прибуток</strong>
+            <p class="benefits-item-description">Отримувати прибуток вище на 1 млн грн і не залежати від зростання
+              тарифів
+            </p>
+          </div>
+        </div>
+        <div class="benefits-item">
+          <div class="benefits-img">
+            <img loading="lazy" src="./src/assets/diag.svg" alt="Якість напруги">
+          </div>
+          <div class="benefits-text-wrapper">
+            <strong class="benefits-item-title">Якість напруги</strong>
+            <p class="benefits-item-description">Підвишити якість напруги для своїх потреб при мінімальному
+              обслуговуванні
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="stationTypes" class="type-station flex">
+      <h2 class="type-station-title section-title">Типи станцій</h2>
+      <div class="type-station-img">
+        <picture>
+          <source media="(max-width: 768px)" srcset="./src/img/type-station-mobile.jpg">
+          <source media="(min-width: 769px)" srcset="./src/img/type-station.jpg">
+          <img loading="lazy" src="./src/img/type-station.jpg" alt="Типи станцій">
+        </picture>
+        <span>Комерційна</span>
+        <p>Заробіток</p>
+      </div>
+      <div class="type-station-block-wrapper flex">
+        <h2 class="type-station-suptitle section-title">Сонячна електростанція для економії та заробітку</h2>
+        <p class="type-station-suptitle-description">Це мережева сонячна станція, яка використовується для власного
+          споживання електроенергії та її продажу державі за
+          «зеленим» тарифом. Станція не містить акумуляторів і працює при підключенні до загальної електромережі</p>
+      </div>
+      <div class="type-station-block-wrapper flex no-margin">
+        <div class="type-station-block-item">
+          <h3 class="type-station-block-title">Зменшує комунальні витрати споживача</h3>
+          <p class="type-station-block-subtitle">Згенерована електроенергія використовується для власного
+            енергоспоживання</p>
+        </div>
+        <div class="type-station-block-item">
+          <h3 class="type-station-block-title">Дозволяє заробляти на сонячній енергії</h3>
+          <p class="type-station-block-subtitle">Надлишок згенерованої електроенергії спрямовується в загальну мережу та
+            продається за “зеленим” тарифом</p>
+        </div>
+      </div>
+      <div class="type-station-block-wrapper flex">
+        <div class="type-station-block-item">
+          <h3 class="type-station-block-description uppercase">Мережева сонячна електростанція окуповується до 5 років,
+            а в подальшому приносить постійний прибуток. Станція працює 25
+            років</h3>
+          <button class="type-station-button leaveRequest">Залишити заявку</button>
+        </div>
+      </div>
+    </section>
+    <section class="counting-station flex">
+      <h2 class="counting-station-title section-title">Розрахунок станції для заробітку</h2>
+      <div class="counting-station-wrapper flex">
+        <div class="counting-block-wrapper">
+          <div class="counting-block-graph">
+            <div class="counting-block-graph-elem">
+              <p class="counting-block-graph-text">10 <sup>кВт</sup></p>
+            </div>
+          </div>
+          <p class="counting-block-title">Необхідна потужність електростанції</p>
+        </div>
+        <div class="counting-block-wrapper">
+          <div class="counting-block-graph">
+            <div class="counting-block-graph-elem used-energy">
+              <p class="counting-block-graph-text">1 400 <sup>кВт</sup></p>
+            </div>
+          </div>
+          <p class="counting-block-title">Споживання електроенергії за місяць</p>
+        </div>
+      </div>
+      <div class="counting-station-wrapper">
+        <div class="counting-station-cost-item">
+          <h4 class="counting-station-cost-title">Вартість станції</h4>
+          <p class="counting-station-cost-suptitle">10 000 $</p>
+        </div>
+        <div class="counting-station-cost-item">
+          <h4 class="counting-station-cost-title">Дохід в рік</h4>
+          <p class="counting-station-cost-suptitle">467 $</p>
+        </div>
+        <div class="counting-station-cost-item">
+          <h4 class="counting-station-cost-title">Окупність</h4>
+          <p class="counting-station-cost-suptitle">21,4 рік</p>
+        </div>
+      </div>
+    </section>
+    <section class="type-station flex">
+      <h2 class="type-station-title section-title">Типи станцій</h2>
+      <div class="type-station-img">
+        <picture>
+          <source media="(max-width: 768px)" srcset="./src/img/autonomity-mobile.jpg">
+          <source media="(min-width: 769px)" srcset="./src/img/autonomity.jpg">
+          <img loading="lazy" src="./src/img/autonomity.jpg" alt="Автономність">
+        </picture>
+        <span>власні потреби</span>
+        <p>Автономність</p>
+      </div>
+      <div class="type-station-block-wrapper flex">
+        <h2 class="type-station-suptitle section-title">Сонячна електростанція для власних потреб</h2>
+        <p class="type-station-suptitle-description">Це гібридна сонячна електростанція, яка генерує електроенергію для
+          особистого споживання, а надлишок направляє в
+          акумулятори. Робота станції не залежить від зовнішньої мережі</p>
+      </div>
+      <div class="type-station-block-wrapper flex no-margin margin64">
+        <div class="type-station-block-item">
+          <h3 class="type-station-block-title">Автономне електропостачання будинку 24/7</h3>
+          <p class="type-station-block-subtitle">Безперебійне та цілодобове електропостачання будинку від згенерованої
+            сонячної енергії</p>
+        </div>
+        <div class="type-station-block-item">
+          <h3 class="type-station-block-title">Незалежність від постачальників електроенергії</h3>
+          <p class="type-station-block-subtitle">Збільшення тарифів та зовнішні зміни у енергопостачанні не будуть на
+            вас впливати</p>
+        </div>
+      </div>
+      <div class="type-station-block-wrapper flex">
+        <div class="type-station-block-item">
+          <button class="type-station-button leaveRequest">Залишити заявку</button>
+        </div>
+      </div>
+    </section>
+    <section id="installation" class="key-station flex">
+      <div class="key-station-header-wrapper">
+        <h2 class="key-station-title section-title">Станція під ключ</h2>
+        <p class="key-station-description">Що входить у готове рішення від Romstal</p>
+      </div>
+      <div class="key-station-items-wrapper">
+        <div class="key-station-item">
+          <h4 class="key-station-item-title">Обладнання</h4>
+          <p class="key-station-item-suptitle">Повний комплект сонячної електростанції від 1 кВт до 1 МВт: панелі з
+            фотоелементами, каркаси, периферія, захист, модулі
+            обліку, контролю та зв’язку.</p>
+        </div>
+        <div class="key-station-item">
+          <h4 class="key-station-item-title">Встановлення і запуск</h4>
+          <p class="key-station-item-suptitle">Виготовлення і монтаж каркасу, встановлення панелей, налаштування
+            інвертора, монтаж системи захисту, тестування та
+            запуск станції.</p>
+        </div>
+        <div class="key-station-item">
+          <h4 class="key-station-item-title">Документальне супроводження</h4>
+          <p class="key-station-item-suptitle">Розробка проекту, узгодження документів, отримання дозволів та ліцензій,
+            оформлення Зеленого тарифу.</p>
+        </div>
+        <div class="key-station-item">
+          <h4 class="key-station-item-title">Офіційна гарантія від постачальника</h4>
+          <p class="key-station-item-suptitle">Виконання всіх гарантійних обовязків та наявність підмінного фонду.
+            Офіційна гарантія на систему і складові 12-25 років.</p>
+        </div>
+      </div>
+    </section>
+    <section class="stage-work flex">
+      <h2 class="stage-work-title section-title">Етапи робіт</h2>
+      <div class="stage-work-items-wrapper">
+        <div class="stage-work-item">
+          <h4 class="stage-work-item-title">Аналізуємо</h4>
+          <div class="stage-work-item-suptitle">
+            <div class="stage-work-item-suptitle-num-wrapper">
+              <span>01</span>
+              <span>02</span>
+              <span>03</span>
+            </div>
+            <div class="stage-work-item-suptitle-text-wrapper">
+              <p>Аналізуємо особливості конструкції будинку</p>
+              <p>Робимо заміри даху за допомогою дрону</p>
+              <p>Проектуємо 3D модель</p>
+              <p class="stage-work-time">3 — 5 ДНІв</p>
+            </div>
+          </div>
+        </div>
+        <div class="stage-work-item">
+          <h4 class="stage-work-item-title">Розраховуємо</h4>
+          <div class="stage-work-item-suptitle">
+            <div class="stage-work-item-suptitle-num-wrapper">
+              <span>04</span>
+              <span>05</span>
+              <span>06</span>
+            </div>
+            <div class="stage-work-item-suptitle-text-wrapper">
+              <p>Розробляємо рішення для вашого дому</p>
+              <p>Підбираємо обладнання</p>
+              <p>Готуємо детальний опис проекту</p>
+              <p class="stage-work-time">3 — 5 ДНІв</p>
+            </div>
+          </div>
+        </div>
+        <div class="stage-work-item">
+          <h4 class="stage-work-item-title">Узгоджуємо</h4>
+          <div class="stage-work-item-suptitle">
+            <div class="stage-work-item-suptitle-num-wrapper">
+              <span>07</span>
+              <span>08</span>
+            </div>
+            <div class="stage-work-item-suptitle-text-wrapper">
+              <p>Готуємо повний пакет технічної документації</p>
+              <p>Супроводжуємо процес узгодження схеми підключення з постачальником електроенеогії</p>
+              <p class="stage-work-time">10 — 45 днів</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="turnkey-station flex">
+      <h2 class="turnkey-station-title section-title">Вартість станції під ключ</h2>
+      <div class="turnkey-station-button-wrapper">
+        <button onclick="switchBtnClick(0)"
+          class="turnkey-station-switch turnkey-station-switch-active">Комерція</button>
+        <button onclick="switchBtnClick(1)" class="turnkey-station-switch">Зелений тариф</button>
+        <button onclick="switchBtnClick(2)" class="turnkey-station-switch">Власні потреби</button>
+      </div>
+      <div class="turnkey-station-cost-circle">
+        <p class="turnkey-station-cost">від</p>
+        <p class="turnkey-station-sum">10 000 $</p>
+      </div>
+      <button class="turnkey-station-btn leaveRequest">Залишити заявку</button>
+    </section>
+    <section class="advantages flex">
+      <h2 class="advantages-title section-title">Наші переваги</h2>
+      <div class="advantages-items-wrapper">
+        <div class="advantages-item">
+          <h4 class="advantages-item-title">Надійне обладнання</h4>
+          <p class="advantages-item-subtitle">Гарантія до 25 років, в залежності від виробника</p>
+        </div>
+        <div class="advantages-item">
+          <h4 class="advantages-item-title">Встановлення під ключ</h4>
+          <p class="advantages-item-subtitle">Доставка, монтаж, налаштування і оформлення</p>
+        </div>
+        <div class="advantages-item">
+          <h4 class="advantages-item-title">Обслуговування</h4>
+          <p class="advantages-item-subtitle">Ми надаємо послуги сервісного обслуговування протягом всього терміну
+            експлуатації</p>
+        </div>
+      </div>
+    </section>
+    <section class="cooperate flex">
+      <h2 class="cooperate-title section-title">Співпрацюємо з брендами</h2>
+      <div class="completed-items-wrapper slider-cooperate">
+        <ul class="carousel-cooperate">
+          <li class="card-cooperate">
+            <div class="cooperate-item">
+              <p class="cooperate-item-subtitle">Canadian Solar</p>
+            </div>
+          </li>
+          <li class="card-cooperate">
+            <div class="cooperate-item">
+              <p class="cooperate-item-subtitle">Trina Solar</p>
+            </div>
+          </li>
+          <li class="card-cooperate">
+            <div class="cooperate-item">
+              <p class="cooperate-item-subtitle">Risen</p>
+            </div>
+          </li>
+          <li class="card-cooperate">
+            <div class="cooperate-item">
+              <p class="cooperate-item-subtitle">Romstal Vision</p>
+            </div>
+          </li>
+          <li class="card-cooperate">
+            <div class="cooperate-item">
+              <p class="cooperate-item-subtitle">Must Energy</p>
+            </div>
+          </li>
+          <li class="card-cooperate">
+            <div class="cooperate-item">
+              <p class="cooperate-item-subtitle">Deye</p>
+            </div>
+          </li>
+          <li class="card-cooperate">
+            <div class="cooperate-item">
+              <p class="cooperate-item-subtitle">Huawei</p>
+            </div>
+          </li>
+          <li class="card-cooperate">
+            <div class="cooperate-item">
+              <p class="cooperate-item-subtitle">Growatt</p>
+            </div>
+          </li>
+          <li class="card-cooperate">
+            <div class="cooperate-item">
+              <p class="cooperate-item-subtitle">Victron Energy</p>
+            </div>
+          </li>
+        </ul>
+        <div class="slider-arrow-wrapper">
+          <i id="left" class="left-arrow turn-btn-cooperate"><img src="./src/assets/arrow-narrow-left.svg"
+              alt="Слайдер ліворуч"></i>
+          <i id="right" class="right-arrow turn-btn-cooperate"><img src="./src/assets/arrow-narrow-right.svg"
+              alt="Слайдер праворуч"></i>
+        </div>
+      </div>
+    </section>
+    <section id="completed" class="completed flex">
+      <h2 class="completed-title section-title">Фото реалізованих проєктів</h2>
+      <div class="completed-items-wrapper slider-photo">
+        <ul class="carousel">
+          <li class="card">
+            <div class="img"><img src="./src/img/slider-photo/1.webp" alt="Виконані роботи ">
+            </div>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./src/img/slider-photo/2.webp" alt=" Виконані роботи ">
+            </div>
+          </li>
+          <li class=" card">
+            <div class="img"><img src="./src/img/slider-photo/3.webp" alt="Виконані роботи ">
+            </div>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./src/img/slider-photo/4.webp" alt="Виконані роботи ">
+            </div>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./src/img/slider-photo/5.webp" alt="Виконані роботи ">
+            </div>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./src/img/slider-photo/6.webp" alt="Виконані роботи ">
+            </div>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./src/img/slider-photo/7.webp" alt="Виконані роботи ">
+            </div>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./src/img/slider-photo/8.webp" alt="Виконані роботи ">
+            </div>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./src/img/slider-photo/9.webp" alt="Виконані роботи ">
+            </div>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./src/img/slider-photo/10.webp" alt="Виконані роботи ">
+            </div>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./src/img/slider-photo/11.webp" alt="Виконані роботи ">
+            </div>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./src/img/slider-photo/12.webp" alt="Виконані роботи ">
+            </div>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./src/img/slider-photo/13.webp" alt="Виконані роботи ">
+            </div>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./src/img/slider-photo/14.webp" alt="Виконані роботи ">
+            </div>
+          </li>
+        </ul>
+        <div class="slider-arrow-wrapper">
+          <i id="left" class="left-arrow turn-btn-photo"><img src="./src/assets/arrow-narrow-left.svg"
+              alt="Слайдер ліворуч"></i>
+          <i id="right" class="right-arrow turn-btn-photo"><img src="./src/assets/arrow-narrow-right.svg"
+              alt="Слайдер праворуч"></i>
+        </div>
+      </div>
+    </section>
+    <!-- <section id="video-completed" class="completed flex">
+      <h2 class="completed-title section-title">Відео реалізованих проєктів</h2>
+      <div class="completed-items-wrapper slider-video">
+        <ul class="carousel-video">
+          <li class="card-video">
+            <div class="img">
+              <iframe width="" height="" src="https://www.youtube.com/embed/PsYw0j5Sxx4" frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </li>
+          <li class="card-video">
+            <div class="img"> <iframe width="" height="" src="https://www.youtube.com/embed/PsYw0j5Sxx4" frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></div>
+          </li>
+          <li class="card-video">
+            <div class="img"> <iframe width="" height="" src="https://www.youtube.com/embed/PsYw0j5Sxx4" frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></div>
+          </li>
+          <li class="card-video">
+            <div class="img"> <iframe width="" height="" src="https://www.youtube.com/embed/PsYw0j5Sxx4" frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></div>
+          </li>
+          <li class="card-video">
+            <div class="img"> <iframe width="" height="" src="https://www.youtube.com/embed/PsYw0j5Sxx4" frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></div>
+          </li>
+          <li class="card-video">
+            <div class="img"> <iframe width="" height="" src="https://www.youtube.com/embed/PsYw0j5Sxx4" frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></div>
+          </li>
+        </ul>
+        <div class="slider-arrow-wrapper">
+          <i id="left" class="left-arrow turn-btn-video"><img src="./src/assets/arrow-narrow-left.svg" alt=""></i>
+          <i id="right" class="right-arrow turn-btn-video"><img src="./src/assets/arrow-narrow-right.svg" alt=""></i>
+        </div>
+      </div>
+    </section> -->
+  </div>
+  <section id="callForm" class="form flex">
+    <form action="" class="call-form">
+      <label for="call" class="form-title">Залишити заявку</label>
+      <input id="call" class="call-form-input" type="number" inputmode="tel" placeholder="+380" pattern="+380"
+        autocomplete="off" aria-label="Відправити" title="Відправити" required>
+      <button class="form-btn"></button>
+      <span>Відправляючи цю форму ви погоджуєтеся на обробку персональних даних</span>
+    </form>
+
+  </section>
+  <div class="container">
+    <footer class="footer flex">
+      <div class="footer-items-wrapper">
+        <div class="footer-item">
+          <h4 class="footer-item-title">інфо</h4>
+          <ul>
+            <li><a href="https://romstal.ua/uk/catalog/1178-fotovoltazhnye-paneli/" target="_blank">Каталог
+                панелей</a></li>
+            <li><a href="https://romstal.ua/uk/site/about" target="_blank">О нас</a></li>
+          </ul>
+        </div>
+        <div class="footer-item">
+          <h4 class="footer-item-title">Контакти</h4>
+          <div class="footer-contact">
+            <a href="tel:+380504407779">+38 050 440 77 79</a>
+            <a href="mailto:shop@romstal.ua">shop@romstal.ua</a>
+            <address><a
+                href="https://www.google.com/maps/place/%D0%A0%D0%BE%D0%BC%D1%81%D1%82%D0%B0%D0%BB+%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0/@50.4807992,30.4897451,18.44z/data=!4m15!1m8!3m7!1s0x40d4cde21e653823:0xbd95e9dadc1394d0!2z0LLRg9C70LjRhtGPINCd0L7QstC-0LrQvtGB0YLRj9C90YLQuNC90ZbQstGB0YzQutCwLCA00JAsINCa0LjRl9CyLCAwMjAwMA!3b1!8m2!3d50.479536!4d30.492765!16s%2Fg%2F11c5d4xzrk!3m5!1s0x40d4cde21e653823:0x168a044b98379039!8m2!3d50.4809987!4d30.4898449!16s%2Fg%2F11_t2f4h7?entry=ttu"
+                target="_blank">м. Київ, вул. Новокостянтинівська 4А</a></address>
+          </div>
+        </div>
+      </div>
+      <div class="footer-title">Romstal</div>
+      <p class="footer-copyright"></p>
+    </footer>
+  </div>
+  <script src="./main.js"></script>
+</body>
+
+</html>

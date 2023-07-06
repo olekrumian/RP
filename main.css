@@ -734,6 +734,10 @@ button:hover {
   color: var(--primary-black);
   background: var(--primary-white);
 }
+.turnkey-station-switch-active:hover {
+  color: var(--primary-black);
+  background: var(--primary-white);
+}
 
 .turnkey-station-cost-circle {
   margin: 6.4rem 0rem 0rem 0rem;

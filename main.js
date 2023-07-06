@@ -411,13 +411,22 @@ function openFullScreen() {
   document.body.appendChild(fullScreenContainer)
 
   fullScreenCard.addEventListener('click', closeFullScreen)
+  document.addEventListener('keydown', handleKeyDown)
 }
 
 function closeFullScreen() {
-  const fullScreenContainer = this.parentNode
+  const fullScreenContainer = document.querySelector('.full-screen-container')
 
   document.body.removeChild(fullScreenContainer)
   document.body.style.overflow = ''
+
+  document.removeEventListener('keydown', handleKeyDown)
+}
+
+function handleKeyDown(event) {
+  if (event.key === 'Escape') {
+    closeFullScreen()
+  }
 }
 
 /* Oleksandr Rumiantsev GITHub - https://github.com/olekrumian */

@@ -194,6 +194,10 @@ button:hover {
 .nav-logo {
   display: none;
 }
+.navigation-item {
+  font-size: var(--fs-14);
+  font-weight: var(--fw-600);
+}
 
 .navigation {
   align-items: center;
@@ -1252,6 +1256,8 @@ input[type='number'] {
 
   .navigation-item {
     display: block;
+    font-size: var(--fs-16);
+    font-weight: var(--fw-600);
   }
 
   .navigation-phone {
@@ -1720,7 +1726,7 @@ input[type='number'] {
 
   .call-form-input {
     margin: 0rem 0rem 1.6rem 0rem;
-    padding: 2.6rem 0rem 2.6rem 0rem;
+    padding: 2.6rem 0rem 3.6rem 0rem;
     height: 5.2rem;
     width: 100%;
     font-size: var(--fs-32);
@@ -1736,7 +1742,7 @@ input[type='number'] {
   }
 
   .form-btn {
-    top: 45%;
+    top: 50%;
     width: 4rem;
     height: 4rem;
     background-size: contain;

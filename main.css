@@ -129,6 +129,10 @@ button {
   -o-border-radius: calc(var(--borderRadius) / 2);
   cursor: pointer;
   transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
 }
 
 button:hover {
@@ -194,6 +198,7 @@ button:hover {
 .nav-logo {
   display: none;
 }
+
 .navigation-item {
   font-size: var(--fs-14);
   font-weight: var(--fw-600);
@@ -734,6 +739,7 @@ button:hover {
   color: var(--primary-black);
   background: var(--primary-white);
 }
+
 .turnkey-station-switch-active:hover {
   color: var(--primary-black);
   background: var(--primary-white);
@@ -1147,16 +1153,16 @@ input[type='number'] {
   flex-basis: 50%;
 }
 
-.footer-item > ul {
+.footer-item>ul {
   display: flex;
 }
 
-.footer-item > ul > li {
+.footer-item>ul>li {
   font-size: var(--fs-16);
   font-weight: var(--fw-500);
 }
 
-.footer-item > ul > li:not(:last-child) {
+.footer-item>ul>li:not(:last-child) {
   margin: 0rem 1.6rem 0rem 0rem;
 }
 
@@ -1202,8 +1208,9 @@ input[type='number'] {
   position: absolute;
   top: 1.6rem;
   right: -7.4rem;
-  width: 5rem;
-  height: 5rem;
+  padding: 0rem 0rem 0rem 0rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 100%;
   background: url('./src/assets/closeGalerry.svg') center no-repeat;
   background-color: var(--thirty-grey);
@@ -1738,6 +1745,7 @@ input[type='number'] {
 
   .form-title {
     font-size: var(--fs-10);
+    margin: 0rem 0rem 3.6rem 0rem;
   }
 
   .call-form span {
@@ -1746,7 +1754,7 @@ input[type='number'] {
 
   .call-form-input {
     margin: 0rem 0rem 1.6rem 0rem;
-    padding: 2.6rem 0rem 3.6rem 0rem;
+    padding: 0rem 0rem 0rem 0rem;
     height: 5.2rem;
     width: 100%;
     font-size: var(--fs-32);
@@ -1777,7 +1785,7 @@ input[type='number'] {
     flex-direction: column;
   }
 
-  .footer-item > ul {
+  .footer-item>ul {
     flex-direction: column;
   }
 
@@ -1785,12 +1793,12 @@ input[type='number'] {
     margin: 0rem 0rem 4rem 0rem;
   }
 
-  .footer-item > ul > li {
+  .footer-item>ul>li {
     font-size: var(--fs-14);
     line-height: 2.1rem;
   }
 
-  .footer-item > ul > li:not(:last-child) {
+  .footer-item>ul>li:not(:last-child) {
     margin: 0rem 0rem 0.8rem 0rem;
   }
 
@@ -1799,11 +1807,11 @@ input[type='number'] {
     font-size: var(--fs-14);
   }
 
-  .footer-contact > a:not(:last-child) {
+  .footer-contact>a:not(:last-child) {
     margin: 0rem 0rem 0.8rem 0rem;
   }
 
-  .footer-contact > a {
+  .footer-contact>a {
     font-size: var(--fs-14);
     line-height: 2.1rem;
   }

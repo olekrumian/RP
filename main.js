@@ -437,3 +437,13 @@ function handleKeyDown(event) {
 }
 
 /* Oleksandr Rumiantsev GITHub - https://github.com/olekrumian */
+
+const callFormInput = document.querySelector('.call-form-input')
+
+callFormInput.addEventListener('keypress', (e) => {
+  let newValue = e.target.value
+  if (!newValue.startsWith('+38')) {
+    newValue = `+38${newValue}`
+  }
+  callFormInput.value = newValue
+})

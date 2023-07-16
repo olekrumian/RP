@@ -175,7 +175,7 @@ button:hover {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 137.6rem;
+  max-width: 142rem;
   height: var(--headerHeight);
   padding: 0 3.2rem;
   align-items: center;

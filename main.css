@@ -25,6 +25,7 @@
   --fs-10: 1rem;
   --fs-12: 1.2rem;
   --fs-14: 1.4rem;
+  --fs-15: 1.5rem;
   --fs-16: 1.6rem;
   --fs-18: 1.8rem;
   --fs-22: 2.2rem;
@@ -118,7 +119,7 @@ address {
 
 button {
   padding: 1.6rem 2.4rem;
-  font-size: var(--fs-14);
+  font-size: var(--fs-5);
   font-weight: var(--fw-700);
   font-family: var(--ff-primary);
   letter-spacing: var(--spacing-02);
@@ -209,7 +210,7 @@ button:hover {
 }
 
 .navigation-item {
-  font-size: var(--fs-14);
+  font-size: var(--fs-15);
   font-weight: var(--fw-600);
 }
 

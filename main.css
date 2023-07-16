@@ -253,7 +253,7 @@ button:hover {
   background: url('./src/img/solar_panel.jpg') no-repeat center;
   background-color: var(--primary-black);
   margin: var(--headerHeight) auto 0;
-  padding: 0 11.1rem 6.4rem;
+  padding: 0 8.8rem 6.4rem;
   border-radius: var(--borderRadius);
   -webkit-border-radius: var(--borderRadius);
   -moz-border-radius: var(--borderRadius);

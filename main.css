@@ -179,7 +179,7 @@ button:hover {
   height: var(--headerHeight);
   padding: 0 3.2rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   background-color: var(--primary-white);
   border-radius: var(--borderRadius);
   -webkit-border-radius: var(--borderRadius);
@@ -1312,7 +1312,7 @@ input[type='text'] {
     background: url('./src/assets/hamburger.svg') no-repeat center;
     border: 0;
     top: 2rem;
-    right: 0rem;
+    right: 0.5rem;
     z-index: 5;
   }
 
@@ -1345,7 +1345,7 @@ input[type='text'] {
 
   .main {
     width: 100%;
-    max-width: 94%;
+    max-width: 96%;
     height: 56.5rem;
     margin: var(--headerHeight) auto 0;
     flex-direction: column;

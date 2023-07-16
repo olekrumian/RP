@@ -10,13 +10,11 @@ const visibility = navigation.getAttribute('data-visible')
 navToggle.addEventListener('click', () => {
   const visibility = navigation.getAttribute('data-visible')
   if (visibility === 'false') {
-    console.log('on')
     navigation.setAttribute('data-visible', true)
     navToggle.setAttribute('aria-expended', true)
     navToggle.style.background = `url('./src/assets/hamburger_close.svg') no-repeat center`
     document.body.style.overflow = 'hidden'
   } else {
-    console.log('off')
     navigation.setAttribute('data-visible', false)
     navToggle.setAttribute('aria-expended', false)
     navToggle.style.background = `url('./src/assets/hamburger.svg') no-repeat center`

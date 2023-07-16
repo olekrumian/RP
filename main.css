@@ -1242,16 +1242,17 @@ input[type='text'] {
   }
 
   .header {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
     padding: 0rem 0rem 0rem 1.5rem;
-
+    margin: 0 auto;
     height: var(--headerHeight);
     transform: none;
     width: 100%;
+    max-width: 100vw;
     z-index: 2;
-
     -webkit-transform: none;
     -moz-transform: none;
     -ms-transform: none;
@@ -1313,7 +1314,7 @@ input[type='text'] {
     display: block;
     position: absolute;
     width: 1.8rem;
-    padding: 1.6rem 0rem 1.6rem 2.4rem;
+    padding: 1.6rem 0rem 2.4rem 2.4rem;
     /* aspect-ratio: 1; */
     background-color: transparent;
     background: url('./src/assets/hamburger.svg') no-repeat center;
@@ -1351,7 +1352,7 @@ input[type='text'] {
   }
 
   .main {
-    max-width: 96%;
+    max-width: 94%;
     width: 100%;
     height: 56.5rem;
     margin: var(--headerHeight) auto 0 auto;

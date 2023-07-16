@@ -1312,7 +1312,7 @@ input[type='text'] {
     background: url('./src/assets/hamburger.svg') no-repeat center;
     border: 0;
     top: 2rem;
-    right: 0.5rem;
+    right: 1rem;
     z-index: 5;
   }
 
@@ -1344,8 +1344,8 @@ input[type='text'] {
   }
 
   .main {
-    width: 100%;
-    max-width: 96%;
+    width: 94%;
+    max-width: 100%;
     height: 56.5rem;
     margin: var(--headerHeight) auto 0;
     flex-direction: column;

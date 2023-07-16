@@ -2,7 +2,8 @@
   /* color */
   --primary-white: #ffffff;
   --primary-black: #18181b;
-  --primary-color: #3991ff;
+  --secondary-black: #505054;
+  --primary-color: #F3B240;
   --primary-light: #d5e9ff;
   --primary-grey: #f6f5f8;
   --secondary-grey: #e9e8e7;
@@ -10,7 +11,7 @@
   --fourths-grey: ##f0f0f0;
   --five-grey: #6d6d6d;
   --six-grey: #71717a;
-  --hover-link-color: #5da2f9;
+  --hover-link-color: #FFC867;
   /* fontFamily */
   --ff-primary: 'Manrope', sans-serif, -apple-system;
   --transition: all 0.2s ease-in-out;
@@ -29,6 +30,8 @@
   --fs-22: 2.2rem;
   --fs-20: 2rem;
   --fs-24: 2.4rem;
+  --fs-26: 2.6rem;
+  --fs-28: 2.8rem;
   --fs-32: 3.2rem;
   --fs-40: 4rem;
   --fs-48: 4.8rem;
@@ -277,7 +280,7 @@ button:hover {
 
 .benefits-title {
   width: 100%;
-  max-width: 20rem;
+  max-width: 46.3rem;
   font-size: var(--fs-40);
   margin: 0rem 0rem 3.2rem 0rem;
 }
@@ -324,12 +327,13 @@ button:hover {
   margin: 0rem 0rem 1rem 0rem;
   font-weight: var(--fw-800);
   font-size: var(--fs-14);
-  text-transform: uppercase;
+
 }
 
 .benefits-item-description {
   font-size: var(--fs-16);
   font-weight: var(--fw-500);
+  color: var(--secondary-black);
 }
 
 /* End of Benefits */
@@ -383,7 +387,7 @@ button:hover {
 
 .type-station-block-wrapper {
   justify-content: space-between;
-  margin: 0.8rem 0rem 12.8rem 0rem;
+  margin: 0.8rem 0rem 8rem 0rem;
 }
 
 .type-station-block-wrapper:last-child {
@@ -396,7 +400,7 @@ button:hover {
 
 .type-station-suptitle {
   width: 100%;
-  max-width: 40rem;
+  max-width: 49.3rem;
   margin: 0;
 }
 
@@ -405,6 +409,7 @@ button:hover {
   max-width: 60rem;
   display: flex;
   align-items: flex-end;
+  color: var(--secondary-black);
 }
 
 .type-station-block-item {
@@ -586,9 +591,10 @@ button:hover {
 }
 
 .key-station-description {
-  width: 15.3rem;
+  width: 10.6rem;
   font-size: var(--fs-16);
   font-weight: var(--fw-500);
+  color: var(--secondary-black);
 }
 
 .key-station-items-wrapper {
@@ -676,7 +682,7 @@ button:hover {
 
 .stage-work-time {
   display: inline-block;
-  padding: 0.4rem 0.8rem;
+  padding: 1rem 1.2rem;
   font-size: var(--fs-14);
   font-weight: var(--fw-800);
   background: var(--primary-grey);
@@ -1306,7 +1312,8 @@ input[type='text'] {
   }
 
   .navigation-btn-wrapper .leaveRequest {
-    font-size: var(--fs-12);
+    font-size: var(--fs-14);
+    font-weight: var(--fw-700);
   }
 
   .nav-item {
@@ -1348,7 +1355,7 @@ input[type='text'] {
   .main-title {
     margin: 0rem 0rem 0.5rem 0rem;
     width: 36rem;
-    font-size: var(--fs-32);
+    font-size: var(--fs-28);
     font-weight: var(--fw-600);
     line-height: var(--lineHeight-120);
     letter-spacing: var(--spacing-03);
@@ -1364,9 +1371,9 @@ input[type='text'] {
   }
 
   .section-title {
-    font-size: var(--fs-24);
+    font-size: var(--fs-26);
     font-weight: var(--fw-600);
-    margin: 0rem 0rem 2.4rem 0rem;
+    margin: 0rem 0rem 3.2rem 0rem;
   }
 
   .benefits {
@@ -1376,6 +1383,7 @@ input[type='text'] {
 
   .benefits-wrapper {
     flex-direction: column;
+    --gap: 1.6rem
   }
 
   .benefits-item {
@@ -1383,7 +1391,8 @@ input[type='text'] {
   }
 
   .benefits-item-title {
-    font-size: var(--fs-12);
+    font-size: var(--fs-16);
+    font-weight: var(--fw-600);
   }
 
   .benefits-item-description {
@@ -1402,6 +1411,7 @@ input[type='text'] {
 
   .type-station .type-station-block-item:last-child {
     margin: 0rem 0rem 0rem 0rem;
+    width: 100%;
   }
 
   .type-station-title {
@@ -1412,11 +1422,12 @@ input[type='text'] {
     flex-direction: column;
     align-items: flex-start;
     --gap: 0;
-    margin: 0.8rem 0rem 6.4rem 0rem;
+    margin: 1.6rem 0rem 3.2rem 0rem;
   }
 
   .type-station-block-wrapper:last-child {
     margin: 4rem auto 0rem;
+    width: 100%;
   }
 
   .no-margin {
@@ -1429,7 +1440,10 @@ input[type='text'] {
 
   .type-station-suptitle {
     margin: 2.4rem 0rem 0.8rem 0rem;
-    width: 20rem;
+    max-width: 34.5rem;
+    width: 100%;
+    font-size: var(--fs-20);
+    font-weight: var(--fw-700);
   }
 
   .type-station-suptitle-description {
@@ -1456,7 +1470,8 @@ input[type='text'] {
   .type-station-block-title {
     margin: 0rem 0rem 0.8rem 0rem;
     width: 18.8rem;
-    font-size: var(--fs-18);
+    font-size: var(--fs-16);
+    font-weight: var(--fw-700);
   }
 
   .type-station-block-subtitle {
@@ -1470,8 +1485,10 @@ input[type='text'] {
 
   .type-station-button {
     display: block;
+    width: 100%;
     margin: 0 auto;
-    font-size: var(--fs-12);
+    font-size: var(--fs-14);
+    font-weight: var(--fw-700);
   }
 
   .counting-station {
@@ -1562,23 +1579,20 @@ input[type='text'] {
   }
 
   .key-station-title {
-    width: 10rem;
+    width: 10.4rem;
     margin: 0rem 0rem 0rem 0rem;
-  }
-
-  .key-station-description {
-    font-size: var(--fs-14);
-    width: 13.4rem;
   }
 
   .key-station-item {
     flex-direction: column;
+    padding: 1.6rem 0rem 0rem 0rem;
   }
 
   .key-station-item-title {
     margin: 0rem 0rem 0.8rem 0rem;
-    width: 14rem;
-    font-size: var(--fs-18);
+    max-width: 28rem;
+    font-size: var(--fs-16);
+    font-weight: var(--fw-700);
   }
 
   .key-station-item-suptitle {
@@ -1587,10 +1601,6 @@ input[type='text'] {
 
   .key-station-item:first-child {
     margin: 3.2rem 0rem 0rem 0rem;
-  }
-
-  .key-station-item {
-    padding: 0.8rem 0rem 0rem 0rem;
   }
 
   .stage-work {
@@ -1607,17 +1617,18 @@ input[type='text'] {
   }
 
   .stage-work-item {
-    padding: 0.8rem 0rem 0rem 0rem;
+    padding: 1.6rem 0rem 0rem 0rem;
     flex-direction: column;
   }
 
   .stage-work-item-title {
-    font-size: var(--fs-18);
+    font-size: var(--fs-16);
+    font-weight: var(--fw-700);
     margin: 0rem 0rem 2.4rem 0rem;
   }
 
   .stage-work-item-suptitle {
-    font-size: var(--fs-14);
+    font-size: var(--fs-16);
   }
 
   .stage-work-item-suptitle-num-wrapper {
@@ -1627,6 +1638,7 @@ input[type='text'] {
   .stage-work-item-suptitle-num-wrapper span {
     margin: 0rem 0rem 1.6rem 0rem;
     line-height: var(--lineHeight-150);
+    font-size: var(--fs-16);
     font-weight: var(--fw-500);
   }
 
@@ -1635,8 +1647,7 @@ input[type='text'] {
   }
 
   .stage-work-time {
-    padding: 1rem;
-    font-size: var(--fs-10);
+    font-size: var(--fs-12);
   }
 
   .turnkey-station {
@@ -1685,7 +1696,7 @@ input[type='text'] {
   }
 
   .advantages-item {
-    padding: 0.8rem 0rem 0rem 0rem;
+    padding: 1.6rem 0rem 0rem 0rem;
   }
 
   .advantages-title {
@@ -1698,8 +1709,8 @@ input[type='text'] {
   }
 
   .advantages-item-title {
-    width: 13.8rem;
-    font-size: var(--fs-18);
+    width: 18rem;
+    font-size: var(--fs-16);
   }
 
   .advantages-item-subtitle {

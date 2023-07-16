@@ -436,7 +436,7 @@ function handleKeyDown(event) {
   }
 }
 
-/* Oleksandr Rumiantsev GITHub - https://github.com/olekrumian */
+/* Oleksandr Rumiantsev, GITHub - https://github.com/olekrumian */
 
 const callFormInput = document.querySelector('.call-form-input')
 

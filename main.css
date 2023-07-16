@@ -1395,12 +1395,6 @@ input[type='text'] {
     height: 33.7rem;
   }
 
-  .benefits-item-title {
-    font-size: var(--fs-16);
-    font-weight: var(--fw-600);
-  }
-
-
   .benefits-img {
     width: 100%;
     margin: 0 auto;

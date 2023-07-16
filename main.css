@@ -177,7 +177,7 @@ button:hover {
   width: 100%;
   max-width: 142rem;
   height: var(--headerHeight);
-  padding: 0 3.2rem;
+  padding: 0 2.2rem;
   align-items: center;
   justify-content: space-between;
   background-color: var(--primary-white);

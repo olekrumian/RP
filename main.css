@@ -175,7 +175,7 @@ button:hover {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 144rem;
+  max-width: 137.6rem;
   height: var(--headerHeight);
   padding: 0 3.2rem;
   align-items: center;
@@ -242,7 +242,7 @@ button:hover {
 /* Main */
 .main {
   width: 100%;
-  max-width: 142rem;
+  max-width: 137.6rem;
   height: 80rem;
   background: url('./src/img/solar_panel.jpg') no-repeat center;
   background-color: var(--primary-black);

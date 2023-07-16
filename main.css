@@ -428,6 +428,7 @@ button:hover {
   font-size: var(--fs-16);
   font-weight: var(--fw-500);
   max-width: 42.9rem;
+  color: var(--secondary-black);
 }
 
 .uppercase {

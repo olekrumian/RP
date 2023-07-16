@@ -1461,7 +1461,7 @@ input[type='text'] {
 
   .type-station-block-title {
     margin: 0rem 0rem 0.8rem 0rem;
-    width: 18.8rem;
+    width: 24rem;
     font-size: var(--fs-16);
     font-weight: var(--fw-700);
   }

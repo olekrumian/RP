@@ -277,6 +277,7 @@ button:hover {
 .benefits {
   margin: 25.6rem 0rem 0rem 0rem;
   flex-direction: column;
+  --gap: 0;
 }
 
 .benefits-title {
@@ -948,10 +949,14 @@ button:hover {
 }
 
 .carousel,
-.carousel-video,
 .carousel-cooperate {
   margin: 0rem 0rem 1.6rem 0rem;
   height: 30rem;
+}
+
+.carousel-video {
+  margin: 0rem 0rem 1.6rem 0rem;
+  height: 45rem;
 }
 
 .slider-video .carousel-video {

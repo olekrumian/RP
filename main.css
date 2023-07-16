@@ -411,6 +411,8 @@ button:hover {
   display: flex;
   align-items: flex-end;
   color: var(--secondary-black);
+  font-size: var(--fs-16);
+  font-weight: var(--fw-500);
 }
 
 .type-station-block-item {
@@ -1449,10 +1451,6 @@ input[type='text'] {
     font-weight: var(--fw-700);
   }
 
-  .type-station-suptitle-description {
-    font-size: var(--fs-14);
-    font-weight: var(--fw-500);
-  }
 
   .type-station-img span {
     padding: 1rem;
@@ -1475,10 +1473,6 @@ input[type='text'] {
     width: 18.8rem;
     font-size: var(--fs-16);
     font-weight: var(--fw-700);
-  }
-
-  .type-station-block-subtitle {
-    font-size: var(--fs-14);
   }
 
   .type-station-block-description {

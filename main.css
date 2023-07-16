@@ -675,10 +675,14 @@ button:hover {
   margin: 0rem 0rem 1.6rem 0rem;
   line-height: var(--lineHeight-150);
   font-weight: var(--fw-500);
+  font-size: var(--fs-16);
+  color: var(--secondary-black);
 }
 
 .stage-work-item-suptitle-text-wrapper {
   flex-basis: 90%;
+  font-size: var(--fs-16);
+  color: var(--secondary-black);
 }
 
 .stage-work-item-suptitle p:not(:last-child) {
@@ -1617,18 +1621,16 @@ input[type='text'] {
   }
 
   .stage-work-item-suptitle-num-wrapper {
-    flex-basis: 20%;
+    flex-basis: 25%;
   }
 
   .stage-work-item-suptitle-num-wrapper span {
+    display: block;
     margin: 0rem 0rem 1.6rem 0rem;
-    line-height: var(--lineHeight-150);
-    font-size: var(--fs-16);
-    font-weight: var(--fw-500);
   }
 
   .stage-work-item-suptitle-text-wrapper {
-    flex-basis: 80%;
+    flex-basis: 75%;
   }
 
   .stage-work-time {

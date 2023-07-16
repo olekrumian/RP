@@ -1344,7 +1344,7 @@ input[type='text'] {
 
   .main {
     width: 100%;
-    max-width: 98%;
+    max-width: 96%;
     height: 56.5rem;
     margin: var(--headerHeight) auto 0;
     flex-direction: column;

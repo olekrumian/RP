@@ -326,8 +326,8 @@ button:hover {
 .benefits-item-title {
   display: block;
   margin: 0rem 0rem 1rem 0rem;
-  font-weight: var(--fw-800);
-  font-size: var(--fs-14);
+  font-weight: var(--fw-700);
+  font-size: var(--fs-16);
 
 }
 

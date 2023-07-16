@@ -1,6 +1,6 @@
 const navigation = document.querySelector('.navigation')
 const navToggle = document.querySelector('.mobile-nav-toggle')
-const switchSum = document.querySelector('.turnkey-station-sum')
+// const switchSum = document.querySelector('.turnkey-station-sum')
 const date = document.querySelector('.footer-copyright')
 const request = document.querySelectorAll('.leaveRequest')
 const navigationLinks = document.querySelectorAll('.nav-link')
@@ -24,27 +24,27 @@ navToggle.addEventListener('click', () => {
   }
 })
 
-function switchBtnClick(index) {
-  const switchBtn = Array.from(
-    document.querySelectorAll('.turnkey-station-switch')
-  )
+// function switchBtnClick(index) {
+//   const switchBtn = Array.from(
+//     document.querySelectorAll('.turnkey-station-switch')
+//   )
 
-  switchBtn.forEach((btn, i) => {
-    btn.classList.toggle('turnkey-station-switch-active', i === index)
-  })
+//   switchBtn.forEach((btn, i) => {
+//     btn.classList.toggle('turnkey-station-switch-active', i === index)
+//   })
 
-  switchSum.innerHTML = getSwitchSumText(index)
-}
+//   switchSum.innerHTML = getSwitchSumText(index)
+// }
 
-function getSwitchSumText(index) {
-  const switchSumText = {
-    0: '10 000 $',
-    1: '5 000 $',
-    2: '2 000 $',
-  }
+// function getSwitchSumText(index) {
+//   const switchSumText = {
+//     0: '10 000 $',
+//     1: '5 000 $',
+//     2: '2 000 $',
+//   }
 
-  return switchSumText[index] || ''
-}
+//   return switchSumText[index] || ''
+// }
 
 document.addEventListener('DOMContentLoaded', () => {
   date.innerHTML = `Romstal Ukraine © ${new Date().getFullYear()}`

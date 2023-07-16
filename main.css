@@ -1312,7 +1312,7 @@ input[type='text'] {
     background: url('./src/assets/hamburger.svg') no-repeat center;
     border: 0;
     top: 2rem;
-    right: 1rem;
+    right: 0rem;
     z-index: 5;
   }
 

@@ -1400,9 +1400,6 @@ input[type='text'] {
     font-weight: var(--fw-600);
   }
 
-  .benefits-item-description {
-    font-size: var(--fs-14);
-  }
 
   .benefits-img {
     width: 100%;

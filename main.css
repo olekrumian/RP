@@ -825,6 +825,7 @@ button:hover {
   width: 31rem;
   font-size: var(--fs-16);
   font-weight: var(--fw-500);
+  color: var(--secondary-black);
 }
 
 /* End of Advantages */
@@ -1700,6 +1701,7 @@ input[type='text'] {
   }
 
   .advantages-item-title {
+    margin: 0rem 0rem .8rem 0rem;
     width: 18rem;
     font-size: var(--fs-16);
     font-weight: var(--fw-700);

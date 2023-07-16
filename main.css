@@ -1280,10 +1280,6 @@ input[type='text'] {
     left: 1.5rem;
   }
 
-  .logo-title {
-    font-size: var(--fs-20);
-  }
-
   .navigation[data-visible='true'] {
     transform: translateX(0%);
     -webkit-transform: translateX(0%);

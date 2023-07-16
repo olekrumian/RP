@@ -1698,10 +1698,10 @@ input[type='text'] {
   .advantages-item-title {
     width: 18rem;
     font-size: var(--fs-16);
+    font-weight: var(--fw-700);
   }
 
   .advantages-item-subtitle {
-    font-size: var(--fs-14);
     width: 100%;
   }
 

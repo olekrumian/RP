@@ -175,11 +175,7 @@ button:hover {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 142rem;
   height: var(--headerHeight);
-  padding: 0 2.2rem;
-  align-items: center;
-  justify-content: space-between;
   background-color: var(--primary-white);
   border-radius: var(--borderRadius);
   -webkit-border-radius: var(--borderRadius);
@@ -193,6 +189,15 @@ button:hover {
   -ms-transition: var(--transition);
   -o-transition: var(--transition);
   box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.04);
+}
+
+.header-wrapper {
+  max-width: 137.6rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
 }
 
 .logo-title {

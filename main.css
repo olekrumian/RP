@@ -625,6 +625,7 @@ button:hover {
   font-size: var(--fs-16);
   font-weight: var(--fw-500);
   flex-basis: 50%;
+  color: var(--secondary-black);
 }
 
 /* End of Key Station */
@@ -1581,10 +1582,6 @@ input[type='text'] {
     max-width: 28rem;
     font-size: var(--fs-16);
     font-weight: var(--fw-700);
-  }
-
-  .key-station-item-suptitle {
-    font-size: var(--fs-14);
   }
 
   .key-station-item:first-child {

@@ -245,6 +245,7 @@ button:hover {
   max-width: 142rem;
   height: 80rem;
   background: url('./src/img/solar_panel.jpg') no-repeat center;
+  background-color: var(--primary-black);
   margin: var(--headerHeight) auto 0;
   padding: 0 11.1rem 6.4rem;
   border-radius: var(--borderRadius);
@@ -1349,6 +1350,7 @@ input[type='text'] {
     padding: 0 1.6rem;
     align-items: flex-start;
     background: url('./src/img/solar_panel-mobile.jpg') no-repeat center;
+    background-color: var(--primary-black);
     background-size: 100%;
   }
 

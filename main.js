@@ -106,7 +106,7 @@ function toggleHeaderStyle() {
 
     if (currentScroll > previousScroll && currentScroll > headerHeight) {
       headerTopPosition = -headerHeight
-    } else if (currentScroll < previousScroll && currentScroll > 20) {
+    } else if (currentScroll < previousScroll && currentScroll > 100) {
       headerTopPosition = 0
     }
 

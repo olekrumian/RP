@@ -457,7 +457,6 @@ async function fetchCurrencyData() {
     }
 
     const data = await response.json()
-    console.log(data)
     return data
   } catch (error) {
     console.error(error)
@@ -469,7 +468,8 @@ async function getRateSell() {
   const currencyData = await fetchCurrencyData()
   if (!currencyData || currencyData.length === 0) {
     console.log('No currency data available')
-    return null
+    const defaultCurrency = 37 //FIXME: change to default currency if you need
+    return defaultCurrency
   }
 
   const rateSell = currencyData[0].rateSell
@@ -523,7 +523,7 @@ async function getRateSell() {
     const generationEnergy = calculateGenerationEnergy()
     let economy = Math.floor(tariffInputValue * generationEnergy)
 
-    document.getElementById('field1-input').innerHTML = `${economy} $`
+    document.getElementById('field1-input').innerHTML = `${economy} ₴`
     return economy
   }
 
@@ -541,7 +541,7 @@ async function getRateSell() {
     const usedInputValue = document.getElementById('used-input').value
 
     if (!tariffInputValue || !usedInputValue) {
-      document.getElementById('field1-input').innerHTML = '0 $'
+      document.getElementById('field1-input').innerHTML = '0 ₴'
       document.getElementById('field2-input').innerHTML = '0 $'
       document.getElementById('field3-input').innerHTML = '0 років'
     } else {
@@ -553,5 +553,103 @@ async function getRateSell() {
     }
   })
 })()
-
 /* End of Counter */
+/* Counter 2 */
+function getPowerInputValue() {
+  return (document.getElementById('power-input-commerce').value * 1131.5) / 1000
+}
+
+function getUsedInputValue() {
+  return document.getElementById('used-input-commerce').value * 2.56
+}
+console.log(getUsedInputValue())
+
+function calculateCostGreenTariff() {
+  const tariffValue = getPowerInputValue()
+  const usedValue = getUsedInputValue()
+
+  const difference = tariffValue - usedValue * 12
+
+  let costGreenTariff = 0
+  if (difference > 0) {
+    costGreenTariff = difference * 5.22
+  }
+
+  return costGreenTariff
+}
+
+function calculateIncome() {
+  const costGreenTariff = calculateCostGreenTariff()
+  const tariffValue = getPowerInputValue()
+  const usedValue = getUsedInputValue()
+
+  let income = 0
+  if (costGreenTariff === 0) {
+    income = tariffValue * 2.56
+  } else {
+    income = (costGreenTariff + usedValue) * 12
+  }
+
+  return income
+}
+
+const calculateCostSolarStation = () => {
+  const powerValue = getPowerInputValue() //!CEC(РСЕС)
+  console.log(powerValue)
+  let costSolarStation = 0 //!BCEC - Вартість СЕС
+  //? Потужність СЕС бігунком! Вартість СЕС = РСЕС * Вр(Змінюється відповідно до вибраної потужності)
+
+  if (powerValue <= 5) {
+    costSolarStation = Math.floor(powerValue * 780)
+  } else if (powerValue > 5 && powerValue < 12) {
+    costSolarStation = Math.floor(powerValue * 740)
+  } else if (powerValue >= 12 && powerValue < 21) {
+    costSolarStation = Math.floor(powerValue * 675)
+  } else if (powerValue >= 21 && powerValue <= 33.945) {
+    costSolarStation = Math.floor(powerValue * 660)
+  }
+  return costSolarStation
+}
+
+function updateIncomeField() {
+  const incomeValue = calculateIncome()
+  const calculateCost = calculateCostSolarStation()
+
+  const field1Input = document.getElementById('field1-input-commerce')
+  field1Input.innerHTML = `${incomeValue.toFixed(0)} ₴`
+
+  const field1InputCost = document.getElementById('field2-input-commerce')
+  field1InputCost.innerHTML = `${calculateCost.toFixed(0)} $`
+}
+
+const powerInput = document.getElementById('power-input-commerce')
+const usedInput = document.getElementById('used-input-commerce')
+
+powerInput.addEventListener('input', updateIncomeField)
+usedInput.addEventListener('input', updateIncomeField)
+
+// Define the function to get the power commerce payback
+async function powerCommercePayback() {
+  try {
+    // Get the rate sell value from the async function
+    const rateSell = await getRateSell() // Assuming getRateSell() is an async function you have
+
+    // Calculate the cost of the solar station
+    const costSolarStation = calculateCostSolarStation()
+
+    // Calculate the power commerce payback
+    const powerCommercePaybackValue = rateSell * costSolarStation
+
+    return powerCommercePaybackValue
+  } catch (error) {
+    console.error('Error calculating power commerce payback:', error)
+    return 0 // Return a default value in case of an error
+  }
+}
+
+// Call the powerCommercePayback function
+powerCommercePayback().then((result) => {
+  console.log('Power Commerce Payback:', result)
+})
+
+/* End of Counter 2 */

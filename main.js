@@ -445,3 +445,113 @@ callFormInput.addEventListener('keypress', (e) => {
   }
   callFormInput.value = newValue
 })
+
+/* Counter */
+async function fetchCurrencyData() {
+  const url = 'https://api.monobank.ua/bank/currency'
+
+  try {
+    const response = await fetch(url)
+    if (!response.ok) {
+      throw new Error('Failed to fetch currency data')
+    }
+
+    const data = await response.json()
+    console.log(data)
+    return data
+  } catch (error) {
+    console.error(error)
+    return null
+  }
+}
+
+async function getRateSell() {
+  const currencyData = await fetchCurrencyData()
+  if (!currencyData || currencyData.length === 0) {
+    console.log('No currency data available')
+    return null
+  }
+
+  const rateSell = currencyData[0].rateSell
+  console.log(rateSell)
+  return rateSell
+}
+
+;(async () => {
+  const rateSellValue = await getRateSell()
+  const usd = rateSellValue
+
+  const dividedPower = () => {
+    const usedInputValue = document.getElementById('used-input').value
+    let result = usedInputValue / 157.5
+    return result
+  }
+
+  const calculateValue = () => {
+    const resultPower = dividedPower()
+    let result
+
+    if (resultPower < 5) {
+      result = Math.floor(resultPower * 780)
+    } else if (resultPower < 12) {
+      result = Math.floor(resultPower * 740)
+    } else if (resultPower < 21) {
+      result = Math.floor(resultPower * 675)
+    } else if (resultPower < 33) {
+      result = Math.floor(resultPower * 660)
+    } else if (resultPower < 52) {
+      result = Math.floor(resultPower * 625)
+    } else if (resultPower < 60) {
+      result = Math.floor(resultPower * 615)
+    } else {
+      result = Math.floor(resultPower * 605)
+    }
+
+    document.getElementById('field2-input').innerHTML = `${result} $`
+    return result
+  }
+
+  const calculateGenerationEnergy = () => {
+    const resultPower = dividedPower()
+    let generationEnergy = resultPower * 1131.5
+
+    return generationEnergy
+  }
+
+  const calculateEconomy = () => {
+    const tariffInputValue = document.getElementById('tariff-input').value
+    const generationEnergy = calculateGenerationEnergy()
+    let economy = Math.floor(tariffInputValue * generationEnergy)
+
+    document.getElementById('field1-input').innerHTML = `${economy} $`
+    return economy
+  }
+
+  const calculatePayback = () => {
+    const value = calculateValue()
+    const economy = calculateEconomy()
+    let payback = ((value * usd) / economy).toFixed(1)
+
+    document.getElementById('field3-input').innerHTML = `${payback} років`
+    return payback
+  }
+
+  document.addEventListener('input', () => {
+    const tariffInputValue = document.getElementById('tariff-input').value
+    const usedInputValue = document.getElementById('used-input').value
+
+    if (!tariffInputValue || !usedInputValue) {
+      document.getElementById('field1-input').innerHTML = '0 $'
+      document.getElementById('field2-input').innerHTML = '0 $'
+      document.getElementById('field3-input').innerHTML = '0 років'
+    } else {
+      dividedPower()
+      calculateValue()
+      calculateGenerationEnergy()
+      calculateEconomy()
+      calculatePayback()
+    }
+  })
+})()
+
+/* End of Counter */

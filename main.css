@@ -1254,6 +1254,150 @@ input[type='text'] {
   border: none;
 }
 
+/* Counter */
+.counting-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 8rem 0rem 0rem 0rem;
+}
+
+.counting-form-title {
+  margin: 0rem 0rem 8rem 0rem;
+}
+
+.inputs-wrapper {
+  width: 100%;
+  max-width: 90rem;
+}
+
+.counting-form-label {
+  display: inline-block;
+  margin: 0rem 0rem 2.4rem 0rem;
+  padding: 1rem 1.2rem;
+  background: var(--primary-grey);
+  border-radius: calc(var(--borderRadius) / 2);
+  font-size: var(--fs-14);
+  font-weight: var(--fw-800);
+  text-transform: uppercase;
+  -webkit-border-radius: calc(var(--borderRadius) / 2);
+  -moz-border-radius: calc(var(--borderRadius) / 2);
+  -ms-border-radius: calc(var(--borderRadius) / 2);
+  -o-border-radius: calc(var(--borderRadius) / 2);
+}
+
+.styled-range {
+  margin: 0rem auto .8rem;
+  width: 100%;
+  max-width: 87rem;
+  height: 2.4rem;
+  border-radius: 10rem;
+  background: var(--primary-grey);
+  appearance: none;
+  outline: none;
+  -webkit-border-radius: 10rem;
+  -moz-border-radius: 10rem;
+  -ms-border-radius: 10rem;
+  -o-border-radius: 10rem;
+  z-index: 1;
+}
+
+
+.styled-range::-webkit-slider-thumb {
+  width: 2.4rem;
+  height: 2.4rem;
+  background: var(--primary-white);
+  border: .2rem solid var(--primary-color);
+  border-radius: 50%;
+  appearance: none;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.result-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: calc(var(--gap) / 2);
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 29.4rem;
+  height: 25.7rem;
+  border-radius: var(--borderRadius);
+  border: .1rem solid var(--primary-grey);
+  background: var(--primary-grey);
+  -webkit-border-radius: var(--borderRadius);
+  -moz-border-radius: var(--borderRadius);
+  -ms-border-radius: var(--borderRadius);
+  -o-border-radius: var(--borderRadius);
+}
+
+.result-title {
+  margin: 0rem 0rem 1.6rem 0rem;
+  color: var(--primary-black);
+  font-size: var(--fs-12);
+  font-weight: var(--fw-800);
+  text-transform: uppercase;
+}
+
+.result-suptitle {
+  color: var(--primary-black);
+  font-size: var(--fs-24);
+  font-weight: var(--fw-600);
+}
+
+.custom-range {
+  position: relative;
+  margin: 0rem auto 9.4rem;
+  width: 100%;
+  max-width: 87rem;
+  height: 2.4rem;
+  appearance: none;
+  outline: none;
+  -webkit-border-radius: 10rem;
+  -moz-border-radius: 10rem;
+  -ms-border-radius: 10rem;
+  -o-border-radius: 10rem;
+}
+
+.slider-dots {
+  padding: 0 1.2rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 1;
+}
+
+.slider-dot {
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.slider-labels {
+  /* padding: 0px 1.2rem; */
+  width: 100%;
+  max-width: 87rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-size: var(--fs-18);
+  font-weight: var(--fw-600);
+}
+
+/* End of Counter */
+
 /* End of Footer */
 @media only screen and (max-width: 576px) {
   .container {
@@ -1908,4 +2052,72 @@ input[type='text'] {
     width: 96%;
     height: 50rem;
   }
+
+  /* Counter */
+  .counting-form {
+    align-items: start;
+  }
+
+  .counting-form-label {
+    margin: 0rem 0rem 1.6rem 0rem;
+    padding: 1rem;
+    font-size: var(--fs-10);
+    font-weight: var(--fw-800);
+  }
+
+  .custom-range {
+    height: 2.8rem;
+    margin: 0rem auto 5.6rem;
+  }
+
+  .styled-range {
+    margin: 0rem 0rem 1rem 0rem;
+    height: 2.8rem;
+  }
+
+  .styled-range::-webkit-slider-thumb {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  .slider-labels {
+    font-size: var(--fs-14);
+    font-weight: var(--fw-600);
+  }
+
+  .slider-dots {
+    padding: 0rem 1.3rem;
+  }
+
+  .slider-dot {
+    width: 0.2rem;
+    height: 0.2rem;
+  }
+
+  .slider-labels-power {
+    padding: 0rem 0.7rem 0rem 1rem;
+  }
+
+  .result-wrapper {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .input-wrapper {
+    width: 100%;
+    height: auto;
+    padding: 2.4rem 0rem;
+  }
+
+  .result-title {
+    font-size: var(--fs-10);
+    font-weight: var(--fw-800);
+  }
+
+  .result-suptitle {
+    font-size: var(--fs-26);
+    font-weight: var(--fw-400);
+  }
+
+  /* End of Counter */
 }

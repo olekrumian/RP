@@ -209,6 +209,69 @@
         </div>
       </div>
     </section>
+    <section class="counting-form">
+      <h3 class="counting-form-title section-title">Розрахунок</h3>
+      <div class="inputs-wrapper">
+        <p class="counting-form-label">Необхідна потужність станції, кВт</p>
+        <div class="custom-range">
+          <input class="styled-range" type="range" min="2" max="12" value="3" step="0.05" name="tariff"
+            id="tariff-input" placeholder="Тариф" list="tariff-datalist" />
+          <div class="slider-dots">
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+          </div>
+          <div class="slider-labels slider-labels-power">
+            <span>2</span>
+            <span>4</span>
+            <span>6</span>
+            <span>8</span>
+            <span>10</span>
+            <span>12</span>
+          </div>
+        </div>
+        <p class="counting-form-label">СПОЖИВАННЯ ЕЛЕКТРОЕНЕРГІЇ ЗА МІСЯЦЬ, КВТ</p>
+        <div class="custom-range">
+          <input class="styled-range" type="range" min="1000" max="25000" value="1000" step="50" name="used"
+            id="used-input" placeholder="кВт" list="used-datalist" />
+          <div class="slider-dots">
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+          </div>
+          <div class="slider-labels">
+            <span>1000</span>
+            <span>5000</span>
+            <span>10000</span>
+            <span>15000</span>
+            <span>20000</span>
+            <span>25000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional fields -->
+      <div class="result-wrapper">
+        <div class="input-wrapper">
+          <p class="result-title" for="field1-input">Економія</p>
+          <p class="result-suptitle" type="text" name="economy" id="field1-input" placeholder="Економія">0 $</p>
+        </div>
+        <div class="input-wrapper">
+          <p class="result-title" for="field2-input">Вартість</p>
+          <p class="result-suptitle" type="text" name="cost" id="field2-input" placeholder="Вартість">0 $</p>
+        </div>
+        <div class="input-wrapper">
+          <p class="result-title" for="field3-input">Окупність</p>
+          <p class="result-suptitle" type="text" name="payback" id="field3-input" placeholder="Окупність">0 років</p>
+        </div>
+      </div>
+    </section>
     <section class="type-station flex">
       <div class="type-station-img">
         <picture>

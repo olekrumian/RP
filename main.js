@@ -467,19 +467,16 @@ async function fetchCurrencyData() {
 async function getRateSell() {
   const currencyData = await fetchCurrencyData()
   if (!currencyData || currencyData.length === 0) {
-    console.log('No currency data available')
-    const defaultCurrency = 37 //FIXME: change to default currency if you need
+    const defaultCurrency = 37 //!FIXME: change to default currency if you need
     return defaultCurrency
   }
 
   const rateSell = currencyData[0].rateSell
-  console.log(rateSell)
   return rateSell
 }
 
 ;(async () => {
   const rateSellValue = await getRateSell()
-  const usd = rateSellValue
 
   const dividedPower = () => {
     const usedInputValue = document.getElementById('used-input').value
@@ -530,11 +527,92 @@ async function getRateSell() {
   const calculatePayback = () => {
     const value = calculateValue()
     const economy = calculateEconomy()
-    let payback = ((value * usd) / economy).toFixed(1)
+    let payback = ((value * rateSellValue) / economy).toFixed(1)
 
     document.getElementById('field3-input').innerHTML = `${payback} років`
     return payback
   }
+
+  /* Counter 2 */
+
+  //? LEGEND
+  //? ГН - yearGeneration
+  //? РСЕС - document.getElementById('power-input-commerce').value
+  //? ВВС - selfUsedPower
+  //? ВЗТ - calculateCostGreenTariff
+  //? Д - calculateCostGreenTariff + selfUsedPower * 12
+
+  function yearGeneration() {
+    return document.getElementById('power-input-commerce').value * 1131.5
+  }
+
+  function selfUsedPower() {
+    return document.getElementById('used-input-commerce').value * 2.56
+  }
+
+  function calculateCostGreenTariff() {
+    const yearGen = yearGeneration()
+    const usedInputValue = document.getElementById('used-input-commerce').value
+    const tariffValue = yearGen - usedInputValue * 12
+    let greenTariffCost = 0
+
+    if (tariffValue > 0) {
+      greenTariffCost = tariffValue * 5.22
+    } else {
+      greenTariffCost = 0
+    }
+    return greenTariffCost
+  }
+
+  function profitPerYear() {
+    const value = calculateCostGreenTariff()
+    let income = 0
+
+    if (value === 0) {
+      income = yearGeneration() * 2.56
+    } else if (value !== 0) {
+      income = value + selfUsedPower() * 12
+    }
+
+    document.getElementById(
+      'field1-input-commerce'
+    ).innerHTML = `${income.toFixed(0)} ₴`
+    return income
+  }
+
+  function calculateCostSolarStation() {
+    const powerValue = document.getElementById('power-input-commerce').value
+    let costSolarStation = 0
+
+    if (powerValue <= 5) {
+      costSolarStation = powerValue * 780
+    } else if (powerValue > 5 && powerValue < 12) {
+      costSolarStation = powerValue * 740
+    } else if (powerValue >= 12 && powerValue < 21) {
+      costSolarStation = powerValue * 675
+    } else if (powerValue >= 21 && powerValue <= 33) {
+      costSolarStation = powerValue * 660
+    }
+    document.getElementById(
+      'field2-input-commerce'
+    ).innerHTML = `${costSolarStation} $`
+    return costSolarStation
+  }
+
+  function calculatePaybackIncome() {
+    const defaultCurrency = rateSellValue //!FIXME: change to default currency if you need
+
+    const convertToHrn = calculateCostSolarStation() * defaultCurrency
+    const percentOfIncomePerYear = (profitPerYear() * 100) / convertToHrn
+    const edb = (Math.floor(percentOfIncomePerYear) * 100) / 80.5
+
+    document.getElementById('field3-input-commerce').innerHTML = `${edb.toFixed(
+      1
+    )} років`
+    return edb
+  }
+
+  /* End of Counter 2 */
 
   document.addEventListener('input', () => {
     const tariffInputValue = document.getElementById('tariff-input').value
@@ -544,112 +622,34 @@ async function getRateSell() {
       document.getElementById('field1-input').innerHTML = '0 ₴'
       document.getElementById('field2-input').innerHTML = '0 $'
       document.getElementById('field3-input').innerHTML = '0 років'
+      document.getElementById('field1-input-commerce').innerHTML = '0 ₴'
+      document.getElementById('field2-input-commerce').innerHTML = '0 $'
+      document.getElementById('field3-input-commerce').innerHTML = '0 років'
     } else {
       dividedPower()
       calculateValue()
       calculateGenerationEnergy()
       calculateEconomy()
       calculatePayback()
+      profitPerYear()
+      calculatePaybackIncome()
+      console.log(
+        '🚀 ~ file: main.js:639 ~ document.addEventListener ~ yearGeneration():',
+        yearGeneration()
+      )
+      console.log(
+        '🚀 ~ file: main.js:643 ~ document.addEventListener ~ selfUsedPower():',
+        selfUsedPower()
+      )
+      console.log(
+        '🚀 ~ file: main.js:647 ~ document.addEventListener ~ calculateCostGreenTariff():',
+        calculateCostGreenTariff()
+      )
+      console.log(
+        '🚀 ~ file: main.js:652 ~ document.addEventListener ~ profitPerYear():',
+        profitPerYear()
+      )
     }
   })
 })()
 /* End of Counter */
-/* Counter 2 */
-function getPowerInputValue() {
-  return (document.getElementById('power-input-commerce').value * 1131.5) / 1000
-}
-
-function getUsedInputValue() {
-  return document.getElementById('used-input-commerce').value * 2.56
-}
-console.log(getUsedInputValue())
-
-function calculateCostGreenTariff() {
-  const tariffValue = getPowerInputValue()
-  const usedValue = getUsedInputValue()
-
-  const difference = tariffValue - usedValue * 12
-
-  let costGreenTariff = 0
-  if (difference > 0) {
-    costGreenTariff = difference * 5.22
-  }
-
-  return costGreenTariff
-}
-
-function calculateIncome() {
-  const costGreenTariff = calculateCostGreenTariff()
-  const tariffValue = getPowerInputValue()
-  const usedValue = getUsedInputValue()
-
-  let income = 0
-  if (costGreenTariff === 0) {
-    income = tariffValue * 2.56
-  } else {
-    income = (costGreenTariff + usedValue) * 12
-  }
-
-  return income
-}
-
-const calculateCostSolarStation = () => {
-  const powerValue = getPowerInputValue() //!CEC(РСЕС)
-  console.log(powerValue)
-  let costSolarStation = 0 //!BCEC - Вартість СЕС
-  //? Потужність СЕС бігунком! Вартість СЕС = РСЕС * Вр(Змінюється відповідно до вибраної потужності)
-
-  if (powerValue <= 5) {
-    costSolarStation = Math.floor(powerValue * 780)
-  } else if (powerValue > 5 && powerValue < 12) {
-    costSolarStation = Math.floor(powerValue * 740)
-  } else if (powerValue >= 12 && powerValue < 21) {
-    costSolarStation = Math.floor(powerValue * 675)
-  } else if (powerValue >= 21 && powerValue <= 33.945) {
-    costSolarStation = Math.floor(powerValue * 660)
-  }
-  return costSolarStation
-}
-
-function updateIncomeField() {
-  const incomeValue = calculateIncome()
-  const calculateCost = calculateCostSolarStation()
-
-  const field1Input = document.getElementById('field1-input-commerce')
-  field1Input.innerHTML = `${incomeValue.toFixed(0)} ₴`
-
-  const field1InputCost = document.getElementById('field2-input-commerce')
-  field1InputCost.innerHTML = `${calculateCost.toFixed(0)} $`
-}
-
-const powerInput = document.getElementById('power-input-commerce')
-const usedInput = document.getElementById('used-input-commerce')
-
-powerInput.addEventListener('input', updateIncomeField)
-usedInput.addEventListener('input', updateIncomeField)
-
-// Define the function to get the power commerce payback
-async function powerCommercePayback() {
-  try {
-    // Get the rate sell value from the async function
-    const rateSell = await getRateSell() // Assuming getRateSell() is an async function you have
-
-    // Calculate the cost of the solar station
-    const costSolarStation = calculateCostSolarStation()
-
-    // Calculate the power commerce payback
-    const powerCommercePaybackValue = rateSell * costSolarStation
-
-    return powerCommercePaybackValue
-  } catch (error) {
-    console.error('Error calculating power commerce payback:', error)
-    return 0 // Return a default value in case of an error
-  }
-}
-
-// Call the powerCommercePayback function
-powerCommercePayback().then((result) => {
-  console.log('Power Commerce Payback:', result)
-})
-
-/* End of Counter 2 */

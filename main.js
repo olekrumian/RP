@@ -602,14 +602,14 @@ async function getRateSell() {
 
     const convertToHrn = calculateCostSolarStation() * defaultCurrency
 
-    //!TODO - Строк окупності
+    //!TODO - Строк окупності. Розкоментувати при необхідності відображати, замість ЄДБ.
     // const paybackIncome = convertToHrn / profitPerYear()
     // document.getElementById(
     //   'field3-input-commerce'
     // ).innerHTML = `${paybackIncome.toFixed(1)}`
     // return paybackIncome
 
-    //!TODO - ЄДБ
+    //!TODO - ЄДБ. Закоментувати 613-618 рядки і розкоментувати 606-610
     const percentOfIncomePerYear = (profitPerYear() * 100) / convertToHrn
     const edb = (percentOfIncomePerYear * 100) / 80.5
     document.getElementById('field3-input-commerce').innerHTML = `${edb.toFixed(
@@ -639,22 +639,6 @@ async function getRateSell() {
       calculatePayback()
       profitPerYear()
       calculatePaybackIncome()
-      console.log(
-        '🚀 ~ file: main.js:639 ~ document.addEventListener ~ yearGeneration():',
-        yearGeneration()
-      )
-      console.log(
-        '🚀 ~ file: main.js:643 ~ document.addEventListener ~ selfUsedPower():',
-        selfUsedPower()
-      )
-      console.log(
-        '🚀 ~ file: main.js:647 ~ document.addEventListener ~ calculateCostGreenTariff():',
-        calculateCostGreenTariff()
-      )
-      console.log(
-        '🚀 ~ file: main.js:652 ~ document.addEventListener ~ profitPerYear():',
-        profitPerYear()
-      )
     }
   })
 })()

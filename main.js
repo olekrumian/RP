@@ -510,9 +510,7 @@ async function getRateSell() {
 
   const calculateGenerationEnergy = () => {
     const resultPower = dividedPower()
-    let generationEnergy = resultPower * 1131.5
-
-    return generationEnergy
+    return resultPower * 1131.5
   }
 
   const calculateEconomy = () => {
@@ -603,12 +601,20 @@ async function getRateSell() {
     const defaultCurrency = rateSellValue //!FIXME: change to default currency if you need
 
     const convertToHrn = calculateCostSolarStation() * defaultCurrency
-    const percentOfIncomePerYear = (profitPerYear() * 100) / convertToHrn
-    const edb = (Math.floor(percentOfIncomePerYear) * 100) / 80.5
 
+    //!TODO - Строк окупності
+    // const paybackIncome = convertToHrn / profitPerYear()
+    // document.getElementById(
+    //   'field3-input-commerce'
+    // ).innerHTML = `${paybackIncome.toFixed(1)}`
+    // return paybackIncome
+
+    //!TODO - ЄДБ
+    const percentOfIncomePerYear = (profitPerYear() * 100) / convertToHrn
+    const edb = (percentOfIncomePerYear * 100) / 80.5
     document.getElementById('field3-input-commerce').innerHTML = `${edb.toFixed(
       1
-    )} років`
+    )} %`
     return edb
   }
 

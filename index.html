@@ -81,15 +81,6 @@
       <div class="benefits-wrapper flex">
         <div class="benefits-item">
           <div class="benefits-img">
-            <img loading="lazy" src="./src/assets/money.svg" alt="Економія">
-          </div>
-          <div class="benefits-text-wrapper">
-            <strong class="benefits-item-title">Економія</strong>
-            <p class="benefits-item-description">Заощаджуйте на власному споживанні електроенергії</p>
-          </div>
-        </div>
-        <div class="benefits-item">
-          <div class="benefits-img">
             <img loading="lazy" src="./src/assets/grow.svg" alt="Заробіток">
           </div>
           <div class="benefits-text-wrapper">
@@ -107,32 +98,44 @@
             </p>
           </div>
         </div>
+        <div class="benefits-item">
+          <div class="benefits-img">
+            <img loading="lazy" src="./src/assets/money.svg" alt="Економія">
+          </div>
+          <div class="benefits-text-wrapper">
+            <strong class="benefits-item-title">Економія</strong>
+            <p class="benefits-item-description">Заощаджуйте на власному споживанні електроенергії</p>
+          </div>
+        </div>
       </div>
     </section>
     <section id="stationTypes" class="type-station flex">
       <h2 class="type-station-title section-title">Типи станцій</h2>
+      <!-- Заробіток -->
       <div class="type-station-img">
         <picture>
-          <source media="(max-width: 768px)" srcset="./src/img/type-station-mobile.jpg">
-          <source media="(min-width: 769px)" srcset="./src/img/type-station.jpg">
-          <img loading="lazy" src="./src/img/type-station.jpg" alt="Типи станцій">
+          <source media="(max-width: 768px)" srcset="./src/img/earned-mobile.jpg">
+          <source media="(min-width: 769px)" srcset="./src/img/earned.jpg">
+          <img loading="lazy" src="./src/img/earned-mobile.jpg" alt="Заробіток">
         </picture>
-        <span>Комерційна</span>
-        <p>Економія</p>
+        <span>Зелений тариф</span>
+        <p>Заробіток</p>
       </div>
       <div class="type-station-block-wrapper flex">
-        <h2 class="type-station-suptitle section-title">Станція для покриття власного споживання на підприємстві</h2>
-        <p class="type-station-suptitle-description">Мережева сонячна станція, яка генерує електроенергію для власного
-          споживання без продажу по зеленому тарифу</p>
+        <h2 class="type-station-suptitle section-title">Станція для покриття власного споживання та заробітку</h2>
+        <p class="type-station-suptitle-description">Мережева сонячна станція, яка використовується для власного
+          споживання та продажу надлишків виробленної електроенергії
+          за зеленим тарифом</p>
       </div>
-      <div class="type-station-block-wrapper flex no-margin">
+      <div class="type-station-block-wrapper flex no-margin margin64">
         <div class="type-station-block-item">
-          <h3 class="type-station-block-title">Зменшує комунальні витрати до 100%</h3>
-          <p class="type-station-block-subtitle">Згенерована електроенергія використовується для власного споживання</p>
+          <h3 class="type-station-block-title">Пасивний дохід</h3>
+          <p class="type-station-block-subtitle">Дозволяє заробляти за рахунок автоматичного продажу надлишків
+            згенерованої енергії</p>
         </div>
         <div class="type-station-block-item">
-          <h3 class="type-station-block-title">Збільшує заощадження бізнеса</h3>
-          <p class="type-station-block-subtitle">Скорочує витрати на оплату електроенергії у майбутньому</p>
+          <h3 class="type-station-block-title">Власне споживання</h3>
+          <p class="type-station-block-subtitle">Станція забезпечує компенсацію власного споживання протягом дня</p>
         </div>
       </div>
       <div class="type-station-block-wrapper flex">
@@ -140,7 +143,9 @@
           <button class="type-station-button leaveRequest">Залишити заявку</button>
         </div>
       </div>
+      <!-- Кінець Заробіток -->
     </section>
+    <!-- Власний розрахунок -->
     <section class="counting-form">
       <h3 class="counting-form-title section-title">Розрахунок</h3>
       <div class="inputs-wrapper">
@@ -190,6 +195,7 @@
         </div>
       </div>
     </section>
+    <!-- Кінець Власний розрахунок  -->
     <!-- <section class="counting-station flex">
       <h2 class="counting-station-title section-title">Розрахунок станції для заробітку</h2>
       <div class="counting-station-wrapper flex">
@@ -226,30 +232,32 @@
       </div>
     </section> -->
     <section class="type-station flex">
+      <!-- Автономність -->
       <div class="type-station-img">
         <picture>
-          <source media="(max-width: 768px)" srcset="./src/img/earned-mobile.jpg">
-          <source media="(min-width: 769px)" srcset="./src/img/earned.jpg">
-          <img loading="lazy" src="./src/img/earned-mobile.jpg" alt="Заробіток">
+          <source media="(max-width: 768px)" srcset="./src/img/autonomity-mobile.jpg">
+          <source media="(min-width: 769px)" srcset="./src/img/autonomity.jpg">
+          <img loading="lazy" src="./src/img/autonomity.jpg" alt="Автономність">
         </picture>
-        <span>Зелений тариф</span>
-        <p>Заробіток</p>
+        <span>Приватна</span>
+        <p>Автономність</p>
       </div>
       <div class="type-station-block-wrapper flex">
-        <h2 class="type-station-suptitle section-title">Станція для покриття власного споживання та заробітку</h2>
-        <p class="type-station-suptitle-description">Мережева сонячна станція, яка використовується для власного
-          споживання та продажу надлишків виробленної електроенергії
-          за зеленим тарифом</p>
+        <h2 class="type-station-suptitle section-title">Станція для покриття власного споживання у приватному будинку
+        </h2>
+        <p class="type-station-suptitle-description">Забезпечує електроенергію для власного споживання а надлишок
+          автоматично зберігає у внутрішніх акумуляторах, не залежить
+          від загальної електромережі</p>
       </div>
       <div class="type-station-block-wrapper flex no-margin margin64">
         <div class="type-station-block-item">
-          <h3 class="type-station-block-title">Пасивний дохід</h3>
-          <p class="type-station-block-subtitle">Дозволяє заробляти за рахунок автоматичного продажу надлишків
-            згенерованої енергії</p>
+          <h3 class="type-station-block-title">Автономність 24/7</h3>
+          <p class="type-station-block-subtitle">Дозволяє забезпечити власні потреби безперебійною електроенергією</p>
         </div>
         <div class="type-station-block-item">
-          <h3 class="type-station-block-title">Власне споживання</h3>
-          <p class="type-station-block-subtitle">Станція забезпечує компенсацію власного споживання протягом дня</p>
+          <h3 class="type-station-block-title">Незалежність</h3>
+          <p class="type-station-block-subtitle">Зміни у тарифах та зовнішні обставини не вплинуть на ваше комфортне
+            перебування у власній оселі</p>
         </div>
       </div>
       <div class="type-station-block-wrapper flex">
@@ -257,8 +265,42 @@
           <button class="type-station-button leaveRequest">Залишити заявку</button>
         </div>
       </div>
+      <!-- Кінець Автономність -->
     </section>
-    <!-- Counting form 2 -->
+    <section class="type-station flex">
+      <!-- Економія -->
+      <div class="type-station-img">
+        <picture>
+          <source media="(max-width: 768px)" srcset="./src/img/type-station-mobile.jpg">
+          <source media="(min-width: 769px)" srcset="./src/img/type-station.jpg">
+          <img loading="lazy" src="./src/img/type-station.jpg" alt="Типи станцій">
+        </picture>
+        <span>Комерційна</span>
+        <p>Економія</p>
+      </div>
+      <div class="type-station-block-wrapper flex">
+        <h2 class="type-station-suptitle section-title">Станція для покриття власного споживання на підприємстві</h2>
+        <p class="type-station-suptitle-description">Мережева сонячна станція, яка генерує електроенергію для власного
+          споживання без продажу по зеленому тарифу</p>
+      </div>
+      <div class="type-station-block-wrapper flex no-margin">
+        <div class="type-station-block-item">
+          <h3 class="type-station-block-title">Зменшує комунальні витрати до 100%</h3>
+          <p class="type-station-block-subtitle">Згенерована електроенергія використовується для власного споживання</p>
+        </div>
+        <div class="type-station-block-item">
+          <h3 class="type-station-block-title">Збільшує заощадження бізнеса</h3>
+          <p class="type-station-block-subtitle">Скорочує витрати на оплату електроенергії у майбутньому</p>
+        </div>
+      </div>
+      <div class="type-station-block-wrapper flex">
+        <div class="type-station-block-item">
+          <button class="type-station-button leaveRequest">Залишити заявку</button>
+        </div>
+      </div>
+      <!-- Кінець Економія -->
+    </section>
+    <!-- Комерційний розрахунок -->
     <section class="counting-form">
       <h3 class="counting-form-title section-title">Розрахунок</h3>
       <div class="inputs-wrapper">
@@ -309,41 +351,7 @@
         </div>
       </div>
     </section>
-    <!-- Edn of Counting form 2 -->
-    <section class="type-station flex">
-      <div class="type-station-img">
-        <picture>
-          <source media="(max-width: 768px)" srcset="./src/img/autonomity-mobile.jpg">
-          <source media="(min-width: 769px)" srcset="./src/img/autonomity.jpg">
-          <img loading="lazy" src="./src/img/autonomity.jpg" alt="Автономність">
-        </picture>
-        <span>Приватна</span>
-        <p>Автономність</p>
-      </div>
-      <div class="type-station-block-wrapper flex">
-        <h2 class="type-station-suptitle section-title">Станція для покриття власного споживання у приватному будинку
-        </h2>
-        <p class="type-station-suptitle-description">Забезпечує електроенергію для власного споживання а надлишок
-          автоматично зберігає у внутрішніх акумуляторах, не залежить
-          від загальної електромережі</p>
-      </div>
-      <div class="type-station-block-wrapper flex no-margin margin64">
-        <div class="type-station-block-item">
-          <h3 class="type-station-block-title">Автономність 24/7</h3>
-          <p class="type-station-block-subtitle">Дозволяє забезпечити власні потреби безперебійною електроенергією</p>
-        </div>
-        <div class="type-station-block-item">
-          <h3 class="type-station-block-title">Незалежність</h3>
-          <p class="type-station-block-subtitle">Зміни у тарифах та зовнішні обставини не вплинуть на ваше комфортне
-            перебування у власній оселі</p>
-        </div>
-      </div>
-      <div class="type-station-block-wrapper flex">
-        <div class="type-station-block-item">
-          <button class="type-station-button leaveRequest">Залишити заявку</button>
-        </div>
-      </div>
-    </section>
+    <!-- Кінець Комерційний розрахунок -->
     <section id="installation" class="key-station flex">
       <div class="key-station-header-wrapper">
         <h2 class="key-station-title section-title">Станція під ключ</h2>

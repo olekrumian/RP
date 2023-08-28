@@ -145,36 +145,34 @@
       </div>
       <!-- Кінець Заробіток -->
     </section>
-    <!-- Власний розрахунок -->
+    <!-- Комерційний розрахунок -->
     <section class="counting-form">
       <h3 class="counting-form-title section-title">Розрахунок</h3>
       <div class="inputs-wrapper">
         <p class="counting-form-label">Необхідна потужність станції, кВт</p>
         <div class="custom-range">
-          <input class="styled-range" type="range" min="2" max="12" value="2" step="0.05" name="tariff"
-            id="tariff-input" placeholder="Тариф" />
-
+          <input class="styled-range" type="range" min="5" max="33" value="0" step="1" name="power"
+            id="power-input-commerce" placeholder="Тариф" />
           <div class="slider-labels slider-labels-power">
-            <span>2</span>
-            <span>4</span>
-            <span>6</span>
-            <span>8</span>
+            <span>5</span>
             <span>10</span>
-            <span>12</span>
+            <span>15</span>
+            <span>20</span>
+            <span>25</span>
+            <span>30</span>
           </div>
         </div>
         <p class="counting-form-label">СПОЖИВАННЯ ЕЛЕКТРОЕНЕРГІЇ ЗА МІСЯЦЬ, КВТ</p>
         <div class="custom-range">
-          <input class="styled-range" type="range" min="1000" max="25000" value="1000" step="50" name="used"
-            id="used-input" placeholder="кВт" />
-
+          <input class="styled-range" type="range" min="100" max="2500" value="0" step="10" name="used"
+            id="used-input-commerce" placeholder="кВт" />
           <div class="slider-labels">
+            <span>100</span>
+            <span>500</span>
             <span>1000</span>
-            <span>5000</span>
-            <span>10000</span>
-            <span>15000</span>
-            <span>20000</span>
-            <span>25000</span>
+            <span>1500</span>
+            <span>2000</span>
+            <span>2500</span>
           </div>
         </div>
       </div>
@@ -182,20 +180,23 @@
       <!-- Additional fields -->
       <div class="result-wrapper">
         <div class="input-wrapper">
-          <p class="result-title" for="field2-input">Вартість станції</p>
-          <p class="result-suptitle" type="text" name="cost" id="field2-input" placeholder="Вартість станції">0 $</p>
+          <p class="result-title" for="field2-input-commerce">Вартість станції</p>
+          <p class="result-suptitle" type="text" name="cost" id="field2-input-commerce" placeholder="Вартість станції">0
+            $</p>
         </div>
         <div class="input-wrapper">
-          <p class="result-title" for="field1-input">Економія</p>
-          <p class="result-suptitle" type="text" name="economy" id="field1-input" placeholder="Економія">0 ₴</p>
+          <p class="result-title" for="field1-input-commerce">Дохід в рік</p>
+          <p class="result-suptitle" type="text" name="economy" id="field1-input-commerce" placeholder="Дохід в рік">0 ₴
+          </p>
         </div>
         <div class="input-wrapper">
-          <p class="result-title" for="field3-input">Окупність</p>
-          <p class="result-suptitle" type="text" name="payback" id="field3-input" placeholder="Окупність">0 років</p>
+          <p class="result-title" for="field3-input-commerce">Окупність</p>
+          <p class="result-suptitle" type="text" name="payback" id="field3-input-commerce" placeholder="Окупність">0
+            %</p>
         </div>
       </div>
     </section>
-    <!-- Кінець Власний розрахунок  -->
+    <!-- Кінець Комерційний розрахунок -->
     <!-- <section class="counting-station flex">
       <h2 class="counting-station-title section-title">Розрахунок станції для заробітку</h2>
       <div class="counting-station-wrapper flex">
@@ -300,34 +301,36 @@
       </div>
       <!-- Кінець Економія -->
     </section>
-    <!-- Комерційний розрахунок -->
+    <!-- Власний розрахунок -->
     <section class="counting-form">
       <h3 class="counting-form-title section-title">Розрахунок</h3>
       <div class="inputs-wrapper">
         <p class="counting-form-label">Необхідна потужність станції, кВт</p>
         <div class="custom-range">
-          <input class="styled-range" type="range" min="5" max="33" value="0" step="1" name="power"
-            id="power-input-commerce" placeholder="Тариф" />
+          <input class="styled-range" type="range" min="2" max="12" value="2" step="0.05" name="tariff"
+            id="tariff-input" placeholder="Тариф" />
+
           <div class="slider-labels slider-labels-power">
-            <span>5</span>
+            <span>2</span>
+            <span>4</span>
+            <span>6</span>
+            <span>8</span>
             <span>10</span>
-            <span>15</span>
-            <span>20</span>
-            <span>25</span>
-            <span>30</span>
+            <span>12</span>
           </div>
         </div>
         <p class="counting-form-label">СПОЖИВАННЯ ЕЛЕКТРОЕНЕРГІЇ ЗА МІСЯЦЬ, КВТ</p>
         <div class="custom-range">
-          <input class="styled-range" type="range" min="100" max="2500" value="0" step="10" name="used"
-            id="used-input-commerce" placeholder="кВт" />
+          <input class="styled-range" type="range" min="1000" max="25000" value="1000" step="50" name="used"
+            id="used-input" placeholder="кВт" />
+
           <div class="slider-labels">
-            <span>100</span>
-            <span>500</span>
             <span>1000</span>
-            <span>1500</span>
-            <span>2000</span>
-            <span>2500</span>
+            <span>5000</span>
+            <span>10000</span>
+            <span>15000</span>
+            <span>20000</span>
+            <span>25000</span>
           </div>
         </div>
       </div>
@@ -335,23 +338,20 @@
       <!-- Additional fields -->
       <div class="result-wrapper">
         <div class="input-wrapper">
-          <p class="result-title" for="field2-input-commerce">Вартість станції</p>
-          <p class="result-suptitle" type="text" name="cost" id="field2-input-commerce" placeholder="Вартість станції">0
-            $</p>
+          <p class="result-title" for="field2-input">Вартість станції</p>
+          <p class="result-suptitle" type="text" name="cost" id="field2-input" placeholder="Вартість станції">0 $</p>
         </div>
         <div class="input-wrapper">
-          <p class="result-title" for="field1-input-commerce">Дохід в рік</p>
-          <p class="result-suptitle" type="text" name="economy" id="field1-input-commerce" placeholder="Дохід в рік">0 ₴
-          </p>
+          <p class="result-title" for="field1-input">Економія</p>
+          <p class="result-suptitle" type="text" name="economy" id="field1-input" placeholder="Економія">0 ₴</p>
         </div>
         <div class="input-wrapper">
-          <p class="result-title" for="field3-input-commerce">Окупність</p>
-          <p class="result-suptitle" type="text" name="payback" id="field3-input-commerce" placeholder="Окупність">0
-            %</p>
+          <p class="result-title" for="field3-input">Окупність</p>
+          <p class="result-suptitle" type="text" name="payback" id="field3-input" placeholder="Окупність">0 років</p>
         </div>
       </div>
     </section>
-    <!-- Кінець Комерційний розрахунок -->
+    <!-- Кінець Власний розрахунок  -->
     <section id="installation" class="key-station flex">
       <div class="key-station-header-wrapper">
         <h2 class="key-station-title section-title">Станція під ключ</h2>

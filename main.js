@@ -504,7 +504,9 @@ async function getRateSell() {
       result = Math.floor(resultPower * 605)
     }
 
-    document.getElementById('field2-input').innerHTML = `${result} ₴`
+    document.getElementById('field2-input').innerHTML = `${
+      result * rateSellValue.toFixed(0)
+    } ₴`
     return result
   }
 
@@ -591,9 +593,9 @@ async function getRateSell() {
     } else if (powerValue >= 21 && powerValue <= 33) {
       costSolarStation = powerValue * 660
     }
-    document.getElementById(
-      'field2-input-commerce'
-    ).innerHTML = `${costSolarStation} ₴`
+    document.getElementById('field2-input-commerce').innerHTML = `${
+      costSolarStation * rateSellValue.toFixed(0)
+    } ₴`
     return costSolarStation
   }
 

@@ -1349,7 +1349,7 @@ input[type='text'] {
 .result-suptitle {
   color: var(--primary-black);
   font-size: var(--fs-24);
-  font-weight: var(--fw-600);
+  font-weight: var(--fw-500);
 }
 
 .custom-range {

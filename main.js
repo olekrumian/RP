@@ -504,7 +504,7 @@ async function getRateSell() {
       result = Math.floor(resultPower * 605)
     }
 
-    document.getElementById('field2-input').innerHTML = `${result} $`
+    document.getElementById('field2-input').innerHTML = `${result} ₴`
     return result
   }
 
@@ -593,7 +593,7 @@ async function getRateSell() {
     }
     document.getElementById(
       'field2-input-commerce'
-    ).innerHTML = `${costSolarStation} $`
+    ).innerHTML = `${costSolarStation} ₴`
     return costSolarStation
   }
 
@@ -603,19 +603,19 @@ async function getRateSell() {
     const convertToHrn = calculateCostSolarStation() * defaultCurrency
 
     //!TODO - Строк окупності. Розкоментувати при необхідності відображати, замість ЄДБ.
-    // const paybackIncome = convertToHrn / profitPerYear()
-    // document.getElementById(
-    //   'field3-input-commerce'
-    // ).innerHTML = `${paybackIncome.toFixed(1)}`
-    // return paybackIncome
+    const paybackIncome = convertToHrn / profitPerYear()
+    document.getElementById(
+      'field3-input-commerce'
+    ).innerHTML = `${paybackIncome.toFixed(1)} років`
+    return paybackIncome
 
     //!TODO - ЄДБ. Закоментувати 613-618 рядки і розкоментувати 606-610
-    const percentOfIncomePerYear = (profitPerYear() * 100) / convertToHrn
-    const edb = (percentOfIncomePerYear * 100) / 80.5
-    document.getElementById('field3-input-commerce').innerHTML = `${edb.toFixed(
-      1
-    )} %`
-    return edb
+    // const percentOfIncomePerYear = (profitPerYear() * 100) / convertToHrn
+    // const edb = (percentOfIncomePerYear * 100) / 80.5
+    // document.getElementById('field3-input-commerce').innerHTML = `${edb.toFixed(
+    //   1
+    // )} %`
+    // return edb
   }
 
   /* End of Counter 2 */
@@ -626,10 +626,10 @@ async function getRateSell() {
 
     if (!tariffInputValue || !usedInputValue) {
       document.getElementById('field1-input').innerHTML = '0 ₴'
-      document.getElementById('field2-input').innerHTML = '0 $'
+      document.getElementById('field2-input').innerHTML = '0 ₴'
       document.getElementById('field3-input').innerHTML = '0 років'
       document.getElementById('field1-input-commerce').innerHTML = '0 ₴'
-      document.getElementById('field2-input-commerce').innerHTML = '0 $'
+      document.getElementById('field2-input-commerce').innerHTML = '0 ₴'
       document.getElementById('field3-input-commerce').innerHTML = '0 років'
     } else {
       dividedPower()

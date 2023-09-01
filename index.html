@@ -70,7 +70,7 @@
   </header>
 
   <main class="main flex">
-    <h1 class="main-title">Відновлювальна сонячна енергія для економії, заробітку та автономії</h1>
+    <h1 class="main-title">Відновлювальна сонячна енергія для заробітку, автономії та економії</h1>
     <p class="main-description">
       Сонячні електростанції під ключ для комерційних підприємств та приватних домогосподарств
     </p>
@@ -151,7 +151,7 @@
       <div class="inputs-wrapper">
         <p class="counting-form-label">Необхідна потужність станції, кВт</p>
         <div class="custom-range">
-          <input class="styled-range" type="range" min="5" max="33" value="0" step="1" name="power"
+          <input class="styled-range" type="range" min="5" max="33" value="1" step="1" name="power"
             id="power-input-commerce" placeholder="Тариф" />
           <div class="slider-labels slider-labels-power">
             <span>5</span>
@@ -164,7 +164,7 @@
         </div>
         <p class="counting-form-label">СПОЖИВАННЯ ЕЛЕКТРОЕНЕРГІЇ ЗА МІСЯЦЬ, КВТ</p>
         <div class="custom-range">
-          <input class="styled-range" type="range" min="100" max="2500" value="0" step="10" name="used"
+          <input class="styled-range" type="range" min="100" max="2500" value="100" step="10" name="used"
             id="used-input-commerce" placeholder="кВт" />
           <div class="slider-labels">
             <span>100</span>
@@ -182,7 +182,7 @@
         <div class="input-wrapper">
           <p class="result-title" for="field2-input-commerce">Вартість станції</p>
           <p class="result-suptitle" type="text" name="cost" id="field2-input-commerce" placeholder="Вартість станції">0
-            $</p>
+            ₴</p>
         </div>
         <div class="input-wrapper">
           <p class="result-title" for="field1-input-commerce">Дохід в рік</p>
@@ -192,7 +192,7 @@
         <div class="input-wrapper">
           <p class="result-title" for="field3-input-commerce">Окупність</p>
           <p class="result-suptitle" type="text" name="payback" id="field3-input-commerce" placeholder="Окупність">0
-            %</p>
+            років</p>
         </div>
       </div>
     </section>
@@ -305,7 +305,7 @@
     <section class="counting-form">
       <h3 class="counting-form-title section-title">Розрахунок</h3>
       <div class="inputs-wrapper">
-        <p class="counting-form-label">Необхідна потужність станції, кВт</p>
+        <p class="counting-form-label">Тариф за СПОЖИВАННЯ ЕЛЕКТРОЕНЕРГІЇ, грн/квт</p>
         <div class="custom-range">
           <input class="styled-range" type="range" min="2" max="12" value="2" step="0.05" name="tariff"
             id="tariff-input" placeholder="Тариф" />
@@ -327,10 +327,10 @@
           <div class="slider-labels">
             <span>1000</span>
             <span>5000</span>
-            <span>10000</span>
-            <span>15000</span>
-            <span>20000</span>
-            <span>25000</span>
+            <span>10 000</span>
+            <span>15 000</span>
+            <span>20 000</span>
+            <span>25 000</span>
           </div>
         </div>
       </div>
@@ -339,7 +339,7 @@
       <div class="result-wrapper">
         <div class="input-wrapper">
           <p class="result-title" for="field2-input">Вартість станції</p>
-          <p class="result-suptitle" type="text" name="cost" id="field2-input" placeholder="Вартість станції">0 $</p>
+          <p class="result-suptitle" type="text" name="cost" id="field2-input" placeholder="Вартість станції">0 ₴</p>
         </div>
         <div class="input-wrapper">
           <p class="result-title" for="field1-input">Економія</p>
